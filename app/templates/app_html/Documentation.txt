@@ -1,0 +1,40 @@
+Theme Contents:
+
+-- HTML:
+index.html - The homepage of the site.
+post.html - Article page for blog posts.
+page.html - Static page.
+archive-authors.html - Archive page for author publications.
+archive-categories.html - Archive page for categorized publication list.
+archive-tags.html - Archive page for tagged publication list.
+archive-search.html - Archive page for searcg results.
+
+-- CSS:
+UIKit 2 components and main style.css file
+
+-- JS:
+JQuery 3.3.1
+UIKit 2 components
+Empty scripts.js file for any custom scripts
+
+---------------------------------------------------------------------------------
+
+General:
+
+This theme requires very little documentation thanks to the fact that it was built with UIKIT v2, which has an extensive documentation of the features that are used by the theme as well some that you can use.
+
+For more information visit: https://getuikit.com/v2
+
+---------------------------------------------------------------------------------
+
+Theme Specific:
+
+The theme code itself comes with proper comments allowing you to easily find and modify specific parts of the website without having to examine much of it.
+
+The CSS file does make use of CSS variables to control the color scheme of the site, they are located at the very top of the CSS main file "style.css" and to change the color scheme of the website the only thing you need is to change its values:
+
+Primary Color: #4472a3
+Primary Color (Darker/Hover): #3a638e
+Dark Color: #333333;
+
+As for the CSS file, all sections of it are divided in sections for easy customization although it is recommended that instead of modifying the main css file a new file is created and applied for modifying/overwriting existing classes.
