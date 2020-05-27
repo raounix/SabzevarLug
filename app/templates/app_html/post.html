@@ -126,7 +126,7 @@
 
                         <!-- Article / Post Meta -->
                         <div class="uk-clearfix meta">
-                            <div class="uk-float-left">نویسنده : <a href="archive-authors.html" title="Author: Anonymous">{{ post.author}}</a> | در تاریخ 18/11/1376</div>
+                            <div class="uk-float-left">نویسنده : <a href="archive-authors.html" title="Author: Anonymous">{{ post.author}}</a> | در تاریخ {{ post.date | date:"d / m / Y" }}</div>
                             <div class="uk-float-right"><a href="archive-categories.html" title="Category: Freelance">{{ Postblog.PostTag }}</a></div>
                         </div>
                         <!-- / Article / Post Meta -->

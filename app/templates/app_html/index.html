@@ -135,7 +135,7 @@
 
                                 <!-- Article Date + Category -->
                                 <div class="uk-clearfix meta">
-                                    <div class="uk-float-left">نویسنده : <a href="archive-authors.html" title="Author: Anonymous">{{p.author}}</a>| در تاریخ 18/11/1376</div>
+                                    <div class="uk-float-left">نویسنده : <a href="archive-authors.html" title="Author: Anonymous">{{p.author}}</a>| در تاریخ {{ p.date | date:"d / m / Y" }} </div>
                                     <div class="uk-float-right"><a href="archive-categories.html" title="Category: Freelance">{{p.PostTag}}</a></div>
                                 </div>
                                 <!-- / Article Date + Category -->
