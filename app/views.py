@@ -12,7 +12,7 @@ def MainPage (request):
 
 
 def PostPage(request,slug):
-    PostBlog = Post.objects.all().filter(Slug = slug).order_by('timestamp')
+    PostBlog = Post.objects.all().filter(Slug = slug)
     
     
     return render(request , "app_html/post.html",{'Postblog':PostBlog})
