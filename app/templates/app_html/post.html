@@ -22,26 +22,19 @@
 <body>
     <!-- Top Navigation Bar -->
     <nav class="gb-topnav">
-        <ul class="gb-container gb-topnav__links">
-            <li>
-                <a href="index.html">Home</a>
-            </li>
+        <ul class="gb-container gb-topnav__links" dir="rtl">
 
-            <li>
-                <a href="archive-categories.html" class="uk-hidden-small">Tutorials</a>
-            </li>
 
-            <li>
-                <a href="archive-categories.html" class="uk-hidden-small">Random</a>
-            </li>
 
             <!-- Social Media Buttons -->
             <li>
-                <!-- RSS -->
-                <a href="#" class="uk-hidden-small">
-                    <i class="uk-icon-rss"></i>
-                </a>
+                <a href="index.html">خانه</a>
             </li>
+
+            <li>
+                <a href="archive-categories.html" class="uk-hidden-small">موضوعات</a>
+            </li>
+
 
             <li>
                 <!-- Twitter -->
@@ -50,19 +43,16 @@
                 </a>
             </li>
 
-            <li>
-                <!-- Google + -->
-                <a href="#" class="uk-hidden-small">
-                    <i class="uk-icon-google-plus"></i>
-                </a>
-            </li>
+
 
             <li>
                 <!-- Facebook -->
                 <a href="#" class="uk-hidden-small">
-                    <i class="uk-icon-facebook"></i>
+                    <i class="uk-icon-github"></i>
                 </a>
             </li>
+
+
             <!-- / Social Media Buttons -->
 
             <!-- Display Mobile Menu Button -->
@@ -71,6 +61,8 @@
                     <i class="uk-icon-bars"></i>
                 </a>
             </li>
+
+
             <!-- / Display Mobile Menu Button -->
         </ul>
     </nav>
@@ -112,8 +104,9 @@
 
             </div>
         </header>
-        <!-- / Site's Header -->
 
+        <!-- / Site's Header -->
+        {% for post in Postblog %}
         <!-- Site's Content: Main + Sidebar -->
         <div class="uk-grid uk-grid-medium gb-content">
 
@@ -123,47 +116,26 @@
 
                     <!-- Article / Post Body -->
                     <article class="gb-post-single__content">
-                        <img src="img/Sample.jpeg" alt="Nature Inspired Code Snippets" />
+
 
                         <!-- Article / Post Title -->
                         <h2>
-                            Nature Inspired Code Snippets
+                            {{ post.Title }}
                         </h2>
                         <!-- / Article / Post Title -->
 
                         <!-- Article / Post Meta -->
                         <div class="uk-clearfix meta">
-                            <div class="uk-float-left">By <a href="archive-authors.html" title="Author: Anonymous">Anonymous</a> on February 29th, 2018</div>
-                            <div class="uk-float-right"><a href="archive-categories.html" title="Category: Freelance">Tutorials</a></div>
+                            <div class="uk-float-left">نویسنده : <a href="archive-authors.html" title="Author: Anonymous">{{ post.author}}</a> | در تاریخ 18/11/1376</div>
+                            <div class="uk-float-right"><a href="archive-categories.html" title="Category: Freelance">{{ Postblog.PostTag }}</a></div>
                         </div>
                         <!-- / Article / Post Meta -->
 
                         <!-- Article / Post Content -->
                         <div class="post-content">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam gravida, nisl eleifend pellentesque sollicitudin, nibh est porttitor magna, id feugiat enim nulla eget metus. Sed lobortis, nisi a rutrum pulvinar, nunc lacus blandit
-                                ante, non lacinia velit nibh nec quam. Vestibulum maximus, ex a condimentum condimentum, enim augue vehicula mi, ac eleifend purus quam at magna. Nulla facilisi. Proin ullamcorper eleifend justo, sit amet tristique diam
-                                convallis dictum. Curabitur ornare justo maximus ligula vehicula, sit amet rutrum elit varius. Etiam porttitor lectus turpis, ut varius dui blandit at. Maecenas ac bibendum nisl. Phasellus vitae augue tristique, tincidunt
-                                elit et, imperdiet odio. In a ultricies purus. Quisque justo nulla, fermentum sed libero fringilla, rutrum congue tellus. Nunc auctor, mauris at imperdiet viverra, nulla arcu faucibus massa, a dapibus nulla mauris in dui.</p>
-
-                            <p>In sed purus at tellus scelerisque lobortis. Mauris at velit et dui scelerisque ultricies vel sed tortor. Maecenas vulputate suscipit metus id porttitor. Praesent ornare massa massa. Nunc at tempus felis, efficitur mollis mi.
-                                Curabitur non ligula magna. Etiam non justo nec nulla molestie bibendum. Donec maximus felis eros, at sodales est dignissim quis. Quisque augue dolor, commodo sit amet turpis id, ultricies vehicula velit. Morbi ut diam
-                                a lacus pulvinar condimentum non vestibulum leo. Maecenas et libero arcu. Cras fermentum, tortor et mattis bibendum, arcu nisi suscipit justo, et tincidunt dolor ante in tortor. Sed id purus felis. Nullam gravida purus
-                                et convallis bibendum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
-
-                            <h3>Vivamus Eu Aliquet Mauris</h3>
-
-                            <p>Aenean quis lectus eu nibh porttitor volutpat. Nulla porttitor a lorem sed porttitor. Vestibulum mattis imperdiet aliquam. Curabitur tristique auctor fermentum. Integer tincidunt velit in elit efficitur feugiat. Maecenas varius
-                                pretium tortor, non consectetur dui scelerisque id. Maecenas fringilla sit amet enim vitae vehicula. Nulla luctus sodales dictum. Sed ultricies tortor ut eros facilisis tincidunt non id lectus. Fusce lobortis metus malesuada
-                                libero rutrum, vel cursus erat accumsan. Phasellus consequat ligula neque, non sollicitudin mi pellentesque ut. Morbi fringilla ante vel elit dictum ornare. Aliquam erat volutpat. Nulla maximus vehicula laoreet.</p>
-
-                            <iframe id="cp_embed_YRzxYV" src="http://codepen.io/alittleredpanda/embed/preview/YRzxYV?height=450&amp;theme-id=0&amp;slug-hash=YRzxYV&amp;default-tab=result&amp;user=alittleredpanda&amp;pen-title=Jellyfish&amp;preview=true" name="CodePen Embed" title="Jellyfish"
-                                class="cp_embed_iframe " style="width: 100%; overflow: hidden; display: block" height="450"></iframe>
                             <p>
-                                <script async="" src="https://static.codepen.io/assets/embed/ei.js"></script>
+                                {{post.MainText}}
                             </p>
-
-                            <p>Duis consectetur turpis et luctus malesuada. Integer sit amet arcu ac elit sagittis commodo. Donec eu bibendum diam. Donec eu ante rutrum, volutpat nibh nec, tristique libero. Integer volutpat blandit nisl ut placerat. Suspendisse
-                                vitae facilisis odio. Suspendisse luctus enim vitae molestie pellentesque. Sed vulputate tempor libero at dictum.</p>
                         </div>
                         <!-- / Article / Post Content -->
 
@@ -171,7 +143,9 @@
                     <!-- / Article / Post Body -->
 
                     <!-- Related Posts -->
-                    <div class="gb-post-single__related">
+
+
+                    <!-- <div class="gb-post-single__related">
                         <h2>Related Posts</h2>
 
                         <ul class="related-posts">
@@ -181,39 +155,30 @@
                             <li><a href="post.html" title="Custom Open Source File Upload Field">Custom Open Source File Upload Field</a></li>
                             <li><a href="post.html" title="Creative Code Examples of Media Player Design">Creative Code Examples of Media Player Design</a></li>
                         </ul>
-                    </div>
+                    </div> -->
+
+
                     <!-- / Related Posts -->
 
                     <!-- Tags -->
-                    <div class="gb-post-single__tags">
+
+
+                    <!-- <div class="gb-post-single__tags">
                         Tags: <a href="archive-tags.html" rel="tag">CSS</a>, <a href="archive-tags.html" rel="tag">HTML</a>, <a href="archive-tags.html" rel="tag">JavaScript</a>
-                    </div>
+                    </div> -->
+
+
                     <!-- / Tags -->
 
                     <!-- Comments -->
-                    <div class="gb-post-single__comments">
+
+                    <!-- <div class="gb-post-single__comments">
                         <h2>Comments</h2>
 
                         <div id="disqus_thread"></div>
 
-                        <!-- Replace with you Disqus Script -->
-                        <script>
-                            var disqus_config = function() {
-                                this.page.url = 'https://www.google.co.ve';
-                                this.page.identifier = 'post-page';
-                            };
-                            (function() {
-                                var d = document,
-                                    s = d.createElement('script');
-                                s.src = 'https://gw2guias.disqus.com/embed.js';
-                                s.setAttribute('data-timestamp', +new Date());
-                                (d.head || d.body).appendChild(s);
-                            })();
-                        </script>
-                        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-                        <!-- / Replace with you Disqus Script -->
 
-                    </div>
+                    </div> -->
                     <!-- / Comments -->
 
                 </div>
@@ -292,6 +257,7 @@
             <!-- / Sidebar -->
 
         </div>
+        {% endfor %}
         <!-- / Site's Content: Main + Sidebar -->
     </div>
 

@@ -8,10 +8,11 @@ from .models import Post
 
 def MainPage (request):
     post = Post.objects.all()
-
     return render(request,"app_html/index.html",{'post':post})
 
 
 def PostPage(request,slug):
-    print(slug)
-    return render(request , "app_html/post.html")
+    PostBlog = Post.objects.all().filter(Slug = slug).order_by('timestamp')
+    
+    
+    return render(request , "app_html/post.html",{'Postblog':PostBlog})
