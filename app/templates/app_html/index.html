@@ -6,10 +6,9 @@
     {% load static %}
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
-    <title>FSF Developer Blog</title>
+    <title>لاگ سبزوار</title>
 
     <!-- CSS Assets -->
-    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,600,700%7CNunito:700,800" rel="stylesheet" type="text/css">
     <link href="{% static 'css/uikit.min.css' %}" rel="stylesheet" type="text/css">
     <link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css">
 
@@ -17,6 +16,18 @@
     <script src="{% static 'js/jquery.min.js' %}"></script>
     <script src="{% static 'js/jquery-migrate.min.js' %}"></script>
     <script src="{% static 'js/uikit.min.js' %}"></script>
+    <script>
+        function spliting(src, title) {
+
+            var path = src;
+            var page = path.split("/").pop();
+            source = "../../static/img/post/" + page;
+
+            document.getElementById(title).src = source;
+
+
+        }
+    </script>
 </head>
 
 <body>
@@ -28,7 +39,7 @@
 
             <!-- Social Media Buttons -->
             <li>
-                <a href="index.html">خانه</a>
+                <a href="/">خانه</a>
             </li>
 
             <li>
@@ -115,13 +126,14 @@
 
                     <!-- Article -->
                     {% for p in post %} {% if p.Status == "p" %}
+
                     <article class="gb-post-index__single">
                         <div class="uk-grid uk-grid-medium">
 
                             <!-- Article Thumbnail -->
                             <div class="uk-width-small-1-1 uk-width-medium-2-6 uk-width-large-3-10">
                                 <a href="post.html" title="Nature Inspired Code Snippets">
-                                    <img src="{% static 'img/b.jpg' %}" alt="Nature Inspired Code Snippets" />
+                                    <img id={{p.Title}} src="../../static/img/loading.gif" onload="spliting( '{{ p.photo.url }}'  , '{{p.Title}}')" alt="Nature Inspired Code Snippets" />
                                 </a>
                             </div>
                             <!-- / Article Thumbnail -->
