@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <title>Author | GeekBlog</title>
+  
+  <!-- CSS Assets -->
+  <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,600,700%7CNunito:700,800" rel="stylesheet" type="text/css">
+  <link href="css/uikit.min.css" rel="stylesheet" type="text/css">
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+  
+  <!-- JS Assets -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate.min.js"></script>
+  <script src="js/uikit.min.js"></script>
+</head>
+<body>
+  <!-- Top Navigation Bar -->
+  <nav class="gb-topnav">
+    <ul class="gb-container gb-topnav__links">
+      <li>
+        <a href="index.html">Home</a>
+      </li>
+      
+      <li>
+        <a href="archive-categories.html" class="uk-hidden-small">Tutorials</a>
+      </li>
+      
+      <li>
+        <a href="archive-categories.html" class="uk-hidden-small">Random</a>
+      </li>
+      
+      <!-- Social Media Buttons -->
+      <li><!-- RSS -->
+        <a href="#" class="uk-hidden-small">
+          <i class="uk-icon-rss"></i>
+        </a>
+      </li>
+      
+      <li><!-- Twitter -->
+        <a href="#" class="uk-hidden-small">
+          <i class="uk-icon-twitter"></i>
+        </a>
+      </li>
+      
+      <li><!-- Google + -->
+        <a href="#" class="uk-hidden-small">
+          <i class="uk-icon-google-plus"></i>
+        </a>
+      </li>
+      
+      <li><!-- Facebook -->
+        <a href="#" class="uk-hidden-small">
+          <i class="uk-icon-facebook"></i>
+        </a>
+      </li>
+      <!-- / Social Media Buttons -->
+      
+      <!-- Display Mobile Menu Button -->
+      <li>
+        <a href="#mobile-menu" class="uk-visible-small" data-uk-offcanvas>
+          <i class="uk-icon-bars"></i>
+        </a>
+      </li>
+      <!-- / Display Mobile Menu Button -->
+    </ul>
+  </nav>
+  <!-- / Top Navigation Bar -->
+  
+  <div class="gb-container">
+    
+    <!-- Site's Header -->
+    <header class="gb-header">      
+      <div class="uk-grid uk-grid-small">
+      
+        <!-- Header Left: Branding / Logo -->
+        <div class="uk-width-medium-2-3">
+          <h1 class="gb-site-title"><!-- Site Title -->
+            <a href="index.html" title="GeekBlog HTML5 Template">Geek<span>Blog</span></a>
+          </h1>
+        </div>
+        <!-- / Header Left: Branding / Logo -->
+        
+        <!-- Header Right: Search -->
+        <div class="uk-width-medium-1-3">
+        
+          <!-- Searchform -->
+          <form class="uk-form gb-searchform" action="archive-search.html" id="searchform" method="get">
+            <div class="uk-grid uk-grid-collapse">
+              <div class="uk-width-8-10">
+                <input type="text" placeholder="Search..." class="uk-width-1-1">
+              </div>
+              <div class="uk-width-2-10">
+                <button class="uk-width-1-1 uk-button uk-button-primary" id="searchsubmit" type="submit"><i class="uk-icon-search"></i></button>
+              </div>
+            </div>
+          </form>
+          <!-- / Searchform -->
+          
+        </div>
+        <!-- / Header Right: Search -->
+        
+      </div>
+    </header>
+    <!-- / Site's Header -->
+    
+    <!-- Site's Content: Main + Sidebar -->
+    <div class="uk-grid uk-grid-medium gb-content">
+      <main class="uk-width-large-7-10 gb-main">
+        
+        <!-- Archive Page -->
+        <div class="gb-archive-page">
+          
+          <!-- Archive Page: RSS -->
+          <div class="uk-clearfix gb-archive-page__rss">
+            <h4 class="uk-float-left">Author Archives</h4>
+            <a class="uk-float-right" href="#">Anonymous <span class="uk-icon-rss"></span></a>
+          </div>
+          <!-- / Archive Page: RSS -->
+          
+          <!-- Archive Page: Posts -->
+          <div class="gb-archive-page__posts">
+            
+            <!-- Archive Title -->
+            <h2 class="archive-title">Anonymous</h2>
+            
+            <!-- Archive Description -->
+            <div class="archive-description">            
+              <p>All of these articles have been written by Anonymous. Some annoying guy who uses a Lorem Ipsum generator and royalty free images.</p>
+            </div>
+            <!-- / Archive Description -->
+            
+            <div class="gb-post-index">
+            
+              <!-- Article -->
+              <article class="gb-post-index__single">
+                <div class="uk-grid uk-grid-medium">
+                  
+                  <!-- Article Thumbnail -->
+                  <div class="uk-width-small-1-1 uk-width-medium-2-6 uk-width-large-3-10">
+                    <a href="post.html" title="Material Design Code Snippets">
+                      <img src="img/Sample-4.jpeg" alt="Material Design Code Snippets" />
+                    </a>
+                  </div>
+                  <!-- / Article Thumbnail -->
+                  
+                  <!-- Article Body -->
+                  <div class="uk-width-small-1-1 uk-width-medium-4-6 uk-width-large-7-10">
+                    <h2><!-- Article Title -->
+                      <a href="post.html" title="Material Design Code Snippets">Material Design Code Snippets</a>
+                    </h2>
+                    
+                    <!-- Article Date + Category -->
+                    <div class="uk-clearfix meta">
+                      <div class="uk-float-left">By <a href="archive-authors.html" title="Author: Anonymous">Anonymous</a> on February 29th, 2018</div>
+                      <div class="uk-float-right"><a href="archive-categories.html" title="Category: Freelance">Tutorials</a></div>
+                    </div>
+                    <!-- / Article Date + Category -->
+                    
+                    <!-- Article Description -->
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque pharetra pretium commodo. In feugiat et mi sit amet venenatis. Vestibulum maximus lacus quis mi iaculis, et pulvinar tortor tristique...</p>
+                  </div>
+                  <!-- / Article Body -->
+                  
+                </div>
+              </article>
+              <!-- / Article -->
+              
+              <!-- Article -->
+              <article class="gb-post-index__single">
+                <div class="uk-grid uk-grid-medium">
+                  
+                  <!-- Article Thumbnail -->
+                  <div class="uk-width-small-1-1 uk-width-medium-2-6 uk-width-large-3-10">
+                    <a href="post.html" title="Apps for Working With CSS">
+                      <img src="img/Sample-5.jpeg" alt="Apps for Working With CSS" />
+                    </a>
+                  </div>
+                  <!-- Article Thumbnail -->
+                  
+                  <!-- Article Body -->
+                  <div class="uk-width-small-1-1 uk-width-medium-4-6 uk-width-large-7-10">
+                    <h2><!-- Article Title -->
+                      <a href="post.html" title="Apps for Working With CSS">Apps for Working With CSS</a>
+                    </h2>
+                    
+                    <!-- Article Date + Category -->
+                    <div class="uk-clearfix meta">
+                      <div class="uk-float-left">By <a href="archive-authors.html" title="Author: Anonymous">Anonymous</a> on February 29th, 2018</div>
+                      <div class="uk-float-right"><a href="archive-categories.html" title="Category: Freelance">Tutorials</a></div>
+                    </div>
+                    <!-- / Article Date + Category -->
+                    
+                    <!-- Article Description -->
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque pharetra pretium commodo. In feugiat et mi sit amet venenatis. Vestibulum maximus lacus quis mi iaculis, et pulvinar tortor tristique...</p>
+                  </div>
+                  <!-- / Article Body -->
+                  
+                </div>
+              </article>
+              <!-- / Article -->
+              
+              <!-- Article -->
+              <article class="gb-post-index__single">
+                <div class="uk-grid uk-grid-medium">
+                  
+                  <!-- Article Thumbnail -->
+                  <div class="uk-width-small-1-1 uk-width-medium-2-6 uk-width-large-3-10">
+                    <a href="post.html" title="Presentations on the Future of CSS">
+                      <img src="img/Sample-6.jpeg" alt="Presentations on the Future of CSS" />
+                    </a>
+                  </div>
+                  <!-- / Article Thumbnail -->
+                  
+                  <!-- Article Body -->
+                  <div class="uk-width-small-1-1 uk-width-medium-4-6 uk-width-large-7-10">
+                    <h2><!-- Article Title -->
+                      <a href="post.html" title="Presentations on the Future of CSS">Presentations on the Future of CSS</a>
+                    </h2>
+                    
+                    <!-- Article Date + Category -->
+                    <div class="uk-clearfix meta">
+                      <div class="uk-float-left">By <a href="archive-authors.html" title="Author: Anonymous">Anonymous</a> on February 29th, 2018</div>
+                      <div class="uk-float-right"><a href="archive-categories.html" title="Category: Freelance">Tutorials</a></div>
+                    </div>
+                    <!-- / Article Date + Category -->
+                    
+                    <!-- Article Description -->
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque pharetra pretium commodo. In feugiat et mi sit amet venenatis. Vestibulum maximus lacus quis mi iaculis, et pulvinar tortor tristique...</p>
+                  </div>
+                  <!-- / Article Body -->
+                  
+                </div>
+              </article>
+              <!-- / Article -->
+              
+              <!-- Article -->
+              <article class="gb-post-index__single">
+                <div class="uk-grid uk-grid-medium">
+                  
+                  <!-- Article Thumbnail -->
+                  <div class="uk-width-small-1-1 uk-width-medium-2-6 uk-width-large-3-10">
+                    <a href="post.html" title="Creative Code Examples of Media Player Design">
+                      <img src="img/Sample-2.jpeg" alt="Creative Code Examples of Media Player Design" />
+                    </a>
+                  </div>
+                  <!-- / Article Thumbnail -->
+                  
+                  <!-- Article Body -->
+                  <div class="uk-width-small-1-1 uk-width-medium-4-6 uk-width-large-7-10">
+                    <h2><!-- Article Title -->
+                      <a href="post.html" title="Creative Code Examples of Media Player Design">Creative Code Examples of Media Player Design</a>
+                    </h2>
+                    
+                    <!-- Article Date + Category -->
+                    <div class="uk-clearfix meta">
+                      <div class="uk-float-left">By <a href="archive-authors.html" title="Author: Anonymous">Anonymous</a> on February 29th, 2018</div>
+                      <div class="uk-float-right"><a href="archive-categories.html" title="Category: Freelance">Tutorials</a></div>
+                    </div>
+                    <!-- / Article Date + Category -->
+                    
+                    <!-- Article Description -->
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque pharetra pretium commodo. In feugiat et mi sit amet venenatis. Vestibulum maximus lacus quis mi iaculis, et pulvinar tortor tristique...</p>
+                  </div>
+                  <!-- / Article Body -->
+                  
+                </div>
+              </article>
+              <!-- / Article -->
+              
+            </div>
+            
+            <!-- Pagination -->
+            <div class="gb-pager">
+            
+              <!-- UIKit Pagination: getuikit.com/v2/docs/pagination.html  -->
+              <ul class="uk-pagination">
+                
+                <!-- Previous -->
+                <li class="uk-disabled">
+                  <span><i class="uk-icon-angle-double-left"></i></span>
+                </li>
+                <!-- / Previous -->
+                
+                <!-- Numbered -->
+                <li class="uk-active"><span>1</span></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><span>...</span></li>
+                <li><a href="#">20</a></li>
+                <!-- / Numbered -->
+                
+                <!-- Next -->
+                <li>
+                  <a href="#"><i class="uk-icon-angle-double-right"></i></a>
+                </li>
+                <!-- / Next -->
+              </ul>
+              
+            </div>
+            <!-- / Pagination -->
+            
+          </div>
+          <!-- / Archive Page: Posts -->
+          
+        </div>
+        <!-- / Archive Page -->
+        
+      </main>
+      <!-- / Main Section -->
+      
+      <!-- Sidebar -->
+      <aside class="uk-width-large-3-10 gb-sidebar">
+        <div class="gb-widgets">
+          
+          <!-- Widget: Email Subscribe -->
+          <div class="gb-widget">
+          
+            <!-- Widget Title -->
+            <h4 class="gb-widget__title">Subscribe</h4>
+            
+            <!-- Widget Content -->
+            <div class="gb-widget__content">
+              <p>Get the latest posts delivered right to your inbox.</p>
+              <form class="uk-form">
+                <div class="uk-grid uk-grid-collapse">
+                  <div class="uk-width-7-10">
+                    <input type="text" placeholder="my@email.com" class="uk-width-1-1">
+                  </div>
+                  <div class="uk-width-3-10">
+                    <button class="uk-width-1-1 uk-button uk-button-primary">Subscribe</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <!-- / Widget Content -->
+            
+          </div>
+          <!-- / Widget: Email Subscribe -->
+          
+          <!-- Widget: Advertisement 300x300 -->
+          <div class="gb-widget">
+            
+            <!-- Widget Title -->
+            <h4 class="gb-widget__title">Advertisement</h4>
+            
+            <!-- Widget Content -->
+            <div class="uk-text-center gb-widget__content">
+              <a href="#"><img src="https://via.placeholder.com/300" alt="Placeholder"></a>
+            </div>
+            <!-- / Widget Content -->
+            
+          </div>
+          <!-- / Widget: Advertisement 300x300 -->
+          
+          <!-- Widget: Tag Cloud -->
+          <div class="gb-widget">
+            
+            <!-- Widget Title -->
+            <h4 class="gb-widget__title">Tag Cloud</h4>
+            
+            <!-- Widget Content -->
+            <div class="uk-text-center gb-widget__content">
+              <a href="archive-tags.html" class="tag">CSS</a>
+              <a href="archive-tags.html" class="tag">Drupal</a>
+              <a href="archive-tags.html" class="tag">HTML</a>
+              <a href="archive-tags.html" class="tag">Javascript</a>
+              <a href="archive-tags.html" class="tag">Joomla</a>
+              <a href="archive-tags.html" class="tag">JQuery</a>
+              <a href="archive-tags.html" class="tag">Logos</a>
+              <a href="archive-tags.html" class="tag">PHP</a>
+              <a href="archive-tags.html" class="tag">Wordpress</a>
+            </div>
+            <!-- / Widget Content -->
+            
+          </div>
+          <!-- / Widget: Tag Cloud -->
+          
+        </div>
+      </aside>
+      <!-- / Sidebar -->
+      
+    </div>
+    <!-- Site's Content: Main + Sidebar -->
+  </div>
+  
+  <!-- Site's Footer -->
+  <footer class="gb-footer">
+    <div class="gb-container">
+    
+      <!-- Footer Columns with Heading and Links -->
+      <div class="uk-grid uk-grid-collapse">
+      
+        <!-- Column #1 -->
+        <div class="uk-width-small-1-2 uk-width-medium-1-4">
+          <div class="gb-footer__col">
+            <h4>HTML5</h4><!-- Column Title -->
+            
+            <ul><!-- Link List -->
+              <li><a href="#">UIKit Templates</a></li>
+              <li><a href="#">Bootstrap Templates</a></li>
+				      <li><a href="#">Foundation Templates</a></li>
+				      <li><a href="#">Bulma Templates</a></li>
+				      <li><a href="#">Skeleton Templates</a></li>
+				      <li><a href="#">Materialize Templates</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- / Column #1 -->
+        
+        <!-- Column #2 -->
+        <div class="uk-width-small-1-2 uk-width-medium-1-4">
+          <div class="gb-footer__col">
+            <h4>Resources</h4><!-- Column Title -->
+            
+            <ul><!-- Link List -->
+              <li><a href="#">CSS Frameworks</a></li>
+              <li><a href="#">JS Frameworks</a></li>
+              <li><a href="#">jQuery Plugins</a></li>
+				      <li><a href="#">Web Fonts</a></li>
+				      <li><a href="#">Web Icons</a></li>
+				      <li><a href="#">Mobile Design</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- / Column #2 -->
+        
+        <!-- Column #3 -->
+        <div class="uk-width-small-1-2 uk-width-medium-1-4">
+          <div class="gb-footer__col">
+            <h4>CMS</h4><!-- Column Title -->
+            
+            <ul><!-- Link List -->
+              <li><a href="#">Drupal</a></li>
+              <li><a href="#">WordPress</a></li>
+				      <li><a href="#">Joomla</a></li>
+				      <li><a href="#">Magento</a></li>
+				      <li><a href="#">ForkCMS</a></li>
+				      <li><a href="#">OctoberCMS</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- / Column #3 -->
+        
+        <!-- Column #4 -->
+        <div class="uk-width-small-1-2 uk-width-medium-1-4">
+          <div class="gb-footer__col">
+            <h4>WordPress</h4><!-- Column Title -->
+            
+            <ul><!-- Link List -->
+              <li><a href="#">WordPress Frameworks</a></li>
+              <li><a href="#">WordPress Starter Themes</a></li>
+				      <li><a href="#">WordPress Themes</a></li>
+				      <li><a href="#">WordPress Plugins</a></li>
+				      <li><a href="#">WordPress eCommerce</a></li>
+				      <li><a href="#">WooCommerce Plugins</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- / Column #4 -->
+        
+      </div>
+      <!-- / Footer Columns with Heading and Links -->
+      
+      <!-- Footer Navigation Links -->
+      <div class="gb-footer__nav">
+        <a href="page.html">About</a>
+        <a href="page.html">Contact</a>
+        <a href="page.html">Advertise</a>
+        <a href="page.html">Contribute</a>
+        <a href="page.html">Privacy</a>
+      </div>
+      <!-- / Footer Navigation Links -->
+      
+      <!-- Credits? i dunno. -->
+      <div class="gb-footer__copyright">
+        Copyright © 2018 GeekBlog
+      </div>
+    </div>
+  </footer>
+  <!-- / Site's Footer -->
+  
+  <!-- UIKit Offcanvas/Mobile Menu: getuikit.com/v2/docs/offcanvas.html  -->
+  <!-- Mobile Menu Contents -->
+  <div id="mobile-menu" class="uk-offcanvas">
+    <div class="uk-offcanvas-bar">
+      <ul class="uk-nav uk-nav-offcanvas uk-nav-parent-icon" data-uk-nav="{multiple:true}">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="archive-categories.html">Tutorials</a></li>
+        <li><a href="archive-categories.html">Random</a></li>
+        <li class="uk-nav-header">Social Media</li><!-- Heading within Menu -->
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Google+</a></li>
+        <li><a href="#">Twitter</a></li>
+        <li><a href="#">RSS Feed</a></li>
+      </ul>
+    </div>
+  </div>
+  <!-- / Mobile Menu Contents -->
+</body>
+</html>
