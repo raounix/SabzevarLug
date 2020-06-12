@@ -10,7 +10,7 @@ import datetime
 from os.path import splitext
 
 def MainPage (request):
-    post = Post.objects.all()
+    post = Post.objects.filter(Status='p')
     paginator = Paginator(post, 3) # Show 25 contacts per page.
 
     page_number = request.GET.get('page')
