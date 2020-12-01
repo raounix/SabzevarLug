@@ -1,0 +1,77 @@
+{% extends 'app_html/base.html' %}
+{% load spl %} 
+{% block main %}
+        <div class="main">
+        <!-- Page title -->
+        <div class="page-title">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">                    
+                        <div class="page-title-heading">
+                            <h1 class="title">لاگ سبزوار</h1>
+                        </div><!-- /.page-title-captions --> 
+                    </div><!-- /.col-md-12 -->  
+                </div><!-- /.row -->  
+            </div><!-- /.container -->                      
+        </div><!-- /.page-title --> 
+
+        <!-- Blog masonry 3 columns -->
+        <section class="blog blog-masonry three-columns " >
+            <div class="container">
+                <div class="row">
+                    <div class="wrap-entry-masonry">
+                        {% for article in post %}
+                        <article class="entry style1" >
+                            <div class="entry-date">
+                                <span class="entry-month">{{ article.date | date:"M" }}</span>
+                                <span class="entry-day"> {{ article.date | date:"d" }}</span>
+                                <span class="entry-year">{{ article.date | date:"Y" }}</span>
+                                
+                            </div>
+                         
+                            
+                            <div class="feature-post">
+                                <a href="{{ article.Slug }}" class="img-post"><img src="../../static/img/post/{{article.photo.url|cut}}" alt="image"></a>
+                            </div><!-- /.feature-post -->
+
+                            <div class="main-post" style="direction:rtl;" >
+                                <h2 class="entry-title"><a href="{{ article.Slug }}">{{article.Title}}</a></h2>
+                                <div class="entry-content">{{article.Brief}}<div class="readmore"><a href="{{ article.Slug }}" class="more-link">بیشتر</a></div>
+                                </div>
+                            </div><!-- /.main-post -->
+                        </article><!-- /.entry -->
+                        {% endfor %}
+                    </div>
+                    <div class="flat-pagination page numeric">
+                        <ul>
+                            
+                            
+                           
+                    
+                    {% if number < 7 %}
+                        {% with ''|center:number as range %}
+                            {% for r in range %}
+                                <li> <a href="?page={{forloop.counter}} ">{{forloop.counter}}</a></li>
+
+                
+                                
+                            {% endfor %}    
+                        {% endwith %}    
+                    
+                    {% else %}
+                    
+                               <li><a href="#">...</a></li> 
+
+                    {% endif %}
+                    
+                     <li><a class="next" href="#">></a></li>
+                        </ul>     
+                    </div>
+                </div><!-- /.row -->
+                <div class="row">
+                    <div class="flat-divider d50px"></div>
+                </div>
+            </div><!-- /.container -->   
+        </section>
+</div >
+        {% endblock %}

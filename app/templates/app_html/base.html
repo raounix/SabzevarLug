@@ -1,326 +1,197 @@
-<!DOCTYPE html>
+<!DOCTYPE html >
 
-<html lang="en">
 
+<!--[if IE 8 ]><html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US"><!--<![endif]-->
 <head>
-    {% load static %}
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Basic Page Needs -->
+    {% load static %} 
     <meta charset="utf-8">
-    <title>لاگ سبزوار</title>
+    <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+    <title>Mountain html template</title>
 
-    <!-- CSS Assets -->
-    <link href="{% static 'css/uikit.css' %}" rel="stylesheet" type="text/css">
-    <link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css">
+    <meta name="author" content="themesflat.com">
 
-    <!-- JS Assets -->
-    <script src="{% static 'js/jquery.min.js' %}"></script>
-    <script src="{% static 'js/jquery-migrate.min.js' %}"></script>
-    <script src="{% static 'js/uikit.js' %}"></script>
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" type="text/css" href="{% static 'stylesheets/bootstrap.css' %}" >
+ 
+    <!-- Theme Style -->
+    <link rel="stylesheet" type="text/css" href="{% static 'stylesheets/style.css' %} ">
 
+    <!-- Responsive -->
+    <link rel="stylesheet" type="text/css" href="{% static 'stylesheets/responsive.css' %}" >
 
+    <!-- Colors -->
+    <link rel="stylesheet" type="text/css" href="{% static 'stylesheets/colors/color1.css' %}" id="colors">
+    
+    <!-- Favicon and touch icons  -->
+    <link href="{% static 'icon/apple-touch-icon-48-precomposed.png' %}" rel="apple-touch-icon-precomposed" sizes="48x48">
+    <link href="{% static 'icon/apple-touch-icon-32-precomposed.png' %}" rel="apple-touch-icon-precomposed">
+    <link href="{% static 'icon/favicon.ico' %}" rel="shortcut icon">
 
-</head>
-
-<body>
-    <!-- Top Navigation Bar -->
-
-    <nav class="gb-topnav">
-        <ul class="gb-container gb-topnav__links" dir="rtl">
-
-            <li>
-                <a href="" class="uk-hidden-small">ثبت نام</a>
-            </li>
-            <li>
-                <a uk-toggle="target: #my-id" class="uk-hidden-small">ورود</a>
-            </li>
-
-            <!-- Social Media Buttons -->
-            <li>
-                <a href="/">خانه</a>
-            </li>
-
-            <li>
-                <a href="archive-categories.html" class="uk-hidden-small">موضوعات</a>
-            </li>
-
-
-            <li>
-                <!-- Twitter -->
-                <a href="#" class="uk-hidden-small">
-                    <i class="uk-icon-twitter"></i>
-                </a>
-            </li>
-
-
-
-            <li>
-                <!-- Facebook -->
-                <a href="https://github.com/captainpick/SabzevarLug" class="uk-hidden-small">
-                    <i class="uk-icon-github"></i>
-                </a>
-            </li>
-
-
-            <!-- / Social Media Buttons -->
-
-            <!-- Display Mobile Menu Button -->
-            <li>
-                <a href="#mobile-menu" class="uk-visible-small" data-uk-offcanvas>
-                    <i class="uk-icon-bars"></i>
-                </a>
-            </li>
-
-
-
-            <!-- / Display Mobile Menu Button -->
-        </ul>
-    </nav>
-
-
-    <div class="gb-container">
-
-
-        <!-- Site's Header -->
-        <header class="gb-header" dir="rtl">
-            <div class="uk-grid uk-grid-small">
-
-                <!-- Header Left: Branding / Logo -->
-                <div class="uk-width-medium-2-3">
-                    <h1 class="gb-site-title">
-                        <!-- Site Title -->
-                        <a href="/" title="گروه کاربران لینوکس سبزوار"><span>لاگ</span>‌<span>سبزوار</span></a>
-                    </h1>
-                </div>
-                <!-- / Header Left: Branding / Logo -->
-
-                <!-- Header Right: Search -->
-                <div class="uk-width-medium-1-3">
-
-                    <!-- Searchform -->
-                    <form class="uk-form gb-searchform" action="archive-search.html" id="searchform" method="get">
-                        <div class="uk-grid uk-grid-collapse">
-                            <div class="uk-width-8-10">
-                                <input type="text" placeholder="جستجو ..." class="uk-width-1-1">
-                            </div>
-                            <div class="uk-width-2-10">
-                                <button class="uk-width-1-1 uk-button uk-button-primary" id="searchsubmit" type="submit"><i class="uk-icon-search"></i></button>
-                            </div>
-                        </div>
-                    </form>
-                    <!-- / Searchform -->
-
-                </div>
-                <!-- / Header Right: Search -->
-
-            </div>
-        </header>
-        <!-- / Site's Header -->
-
-        <!-- Site's Content: Main + Sidebar -->
-        <div class="uk-grid uk-grid-medium gb-content">
-
-            {% block content %} {% endblock %}
-
-
-
-            <!-- Sidebar -->
-            <aside class="uk-width-large-3-10 gb-sidebar">
-                <div class="gb-widgets">
-
-                    <!-- Widget: Email Subscribe -->
-                    <div class="gb-widget">
-
-                        <!-- Widget Title -->
-                        <h4 class="gb-widget__title">عضویت در خبرنامه</h4>
-
-                        <!-- Widget Content -->
-                        <div class="gb-widget__content">
-                            <p>آخرین اخبار را در ایمیل خود دریافت کنید</p>
-                            <form class="uk-form">
-                                <div class="uk-grid uk-grid-collapse">
-                                    <div class="uk-width-7-10">
-                                        <input type="text" placeholder="my@email.com" class="uk-width-1-1">
+    <!--[if lt IE 9]>
+        <script src="javascript/html5shiv.js"></script>
+        <script src="javascript/respond.min.js"></script>
+    <![endif]-->
+</head>                                 
+<body class="header-sticky"  >
+    <div class="loader">
+        <span class="loader1 block-loader"></span>
+        <span class="loader2 block-loader"></span>
+        <span class="loader3 block-loader"></span>
+    </div>  
+    <div class="site-wrapper" >
+        <!-- Header -->            
+        <header id="header" class="header clearfix">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="header-wrap clearfix">
+                            <div id="logo" class="logo">
+                                <a href="index.html" rel="home">
+                                    <img src="{% static 'images/logo.svg'%}" alt="image">
+                                </a>
+                            </div><!-- /.logo -->
+                            <div class="nav-wrap" style="direction:rtl;">
+                                <div class="btn-menu"></div><!-- //mobile menu button -->
+                                <nav id="mainnav" class="mainnav">
+                                    <ul class="menu"> 
+                                        <li class="home">
+                                            <a href="/" >خانه</a>
+                                     
+                                        </li>
+                                        <li><a href="/calendar">جلسات آینده</a>
+                                      
+                                        </li>
+                                        <li><a href="/events">جلسات</a></li>                  
+                                                           
+                                        <li><a href="/news">اخبار</a></li>
+                                        <li><a href="/topics">موضوعات</a></li>
+                                        <li><a href="/speakers">ارائه دهندگان</a></li>
+                                        <li><a href="/images">تصاویر</a></li>
+                                        
+                                    </ul><!-- /.menu -->
+                                </nav><!-- /.mainnav -->  
+                            </div><!-- /.nav-wrap -->
+                            <ul class="menu-extra">
+                                <li id ="telegram-link" >
+                                    <a href="/"><i class="fa fa-twitter"></i></a>
+                                 
+                                 
+                                </li>
+                                <li id ="twitter-link" >
+                                    <a href="/"><i class="fa fa-rss-square"></i></a>
+                                 
+                                 
+                                </li>
+                        
+                                <li id ="s" class="search-box">
+                                    <a href="#"><i class="fa fa-search"></i></a>
+                                    <div class="submenu">
+                                        <div class="widget widget_search">
+                                            <form role="search" method="get" class="search-form" action="#">
+                                                <label>
+                                                    <span class="screen-reader-text">Search for:</span>
+                                                    <input type="search" class="search-field" placeholder="Search …" value="" name="s" title="Search for:">
+                                                </label>
+                                                <input type="submit" class="search-submit" value="Search">
+                                            </form>
+                                        </div>
                                     </div>
-                                    <div class="uk-width-3-10">
-                                        <button class="uk-width-1-1 uk-button uk-button-primary">عضویت</button>
-                                    </div>
+                                </li>
+                        
+                                <li class="off-canvas ">
+                                    <a href="#"><i class="fa fa-bars"></i></a>
+                                </li>
+                            </ul>
+                        </div><!-- /.header-wrap -->
+                    </div>
+                </div> <!-- /.row -->
+            </div> <!--  /.container -->
+        </header><!-- /.header -->
+                  {% block main %} {% endblock %}
+
+                    {% block related%} {% endblock %}
+
+
+        <!-- Footer -->
+        <div class="flat-footer">
+            <div class="footer-widgets">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div id="text-3" class="widget widget_text">            
+                                <div class="textwidget">
+                                    <img src="{% static 'images/logo.svg' %}" alt="Mountain">
                                 </div>
-                            </form>
+                            </div>              
                         </div>
-                        <!-- / Widget Content -->
+                    </div><!-- /.row -->
+                 </div><!-- /.container -->
+            </div><!-- /#page-footer -->
 
-                    </div>
-                    <!-- / Widget: Email Subscribe -->
-
-                    <!-- Widget: Advertisement 300x300 -->
-                    <div class="gb-widget">
-
-                        <!-- Widget Title -->
-                        <h4 class="gb-widget__title">تبلیغات</h4>
-
-                        <!-- Widget Content -->
-                        <div class="uk-text-center gb-widget__content">
-                            <a><img src="{% static 'img/gnulinux.png' %}" alt="تبلیغات"></a>
+            <div class="footer-content">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="social-links">
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-instagram"></i></a>
+                                <a href="#"><i class="fa fa-behance"></i></a>
+                                <a href="#"><i class="fa fa-rss"></i></a>
+                            </div>
                         </div>
-                        <!-- / Widget Content -->
-
-                    </div>
-                    <!-- / Widget: Advertisement 300x300 -->
-
-                    <!-- Widget: Tag Cloud -->
-                    <div class="gb-widget">
-
-                        <!-- Widget Title -->
-                        <h4 class="gb-widget__title">Tag Cloud</h4>
-
-                        <!-- Widget Content -->
-                        <div class="uk-text-center gb-widget__content">
-                            <a href="archive-tags.html" class="tag">CSS</a>
-                            <a href="archive-tags.html" class="tag">Drupal</a>
-                            <a href="archive-tags.html" class="tag">HTML</a>
-                            <a href="archive-tags.html" class="tag">Javascript</a>
-                            <a href="archive-tags.html" class="tag">Joomla</a>
-                            <a href="archive-tags.html" class="tag">JQuery</a>
-                            <a href="archive-tags.html" class="tag">Logos</a>
-                            <a href="archive-tags.html" class="tag">PHP</a>
-                            <a href="archive-tags.html" class="tag">Wordpress</a>
+                        <div class="col-md-12">
+                            <div class="copyright">
+                                <div class="copyright-content">© Mountain 2015<span>•</span>15 Nicholson Street, New York   <span>•</span>   Tel: 1-888-345-6789<br>
+                                    <span>Copyright © 2015 
+                                        <a href="#">Themesflat</a>, Inc.</span> 
+                                </div><!-- /.copyright-content -->
+                            </div><!-- /.copyright -->
                         </div>
-                        <!-- / Widget Content -->
-
-                    </div>
-                    <!-- / Widget: Tag Cloud -->
-
-                </div>
-            </aside>
-            <!-- / Sidebar -->
-
-        </div>
-        <!-- / Site's Content: Main + Sidebar -->
-    </div>
-
-    <!-- Site's Footer -->
-    <footer class="gb-footer">
-        <div class="gb-container">
-
-            <!-- Footer Columns with Heading and Links -->
-            <div class="uk-grid uk-grid-collapse">
-
-                <!-- Column #1 -->
-                <div class="uk-width-small-1-2 uk-width-medium-1-4">
-                    <div class="gb-footer__col">
-                        <h4>HTML5</h4>
-                        <!-- Column Title -->
-
-                        <ul>
-                            <!-- Link List -->
-                            <li><a href="#">UIKit Templates</a></li>
-                            <li><a href="#">Bootstrap Templates</a></li>
-                            <li><a href="#">Foundation Templates</a></li>
-                            <li><a href="#">Bulma Templates</a></li>
-                            <li><a href="#">Skeleton Templates</a></li>
-                            <li><a href="#">Materialize Templates</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- / Column #1 -->
-
-                <!-- Column #2 -->
-                <div class="uk-width-small-1-2 uk-width-medium-1-4">
-                    <div class="gb-footer__col">
-                        <h4>Resources</h4>
-                        <!-- Column Title -->
-
-                        <ul>
-                            <!-- Link List -->
-                            <li><a href="#">CSS Frameworks</a></li>
-                            <li><a href="#">JS Frameworks</a></li>
-                            <li><a href="#">jQuery Plugins</a></li>
-                            <li><a href="#">Web Fonts</a></li>
-                            <li><a href="#">Web Icons</a></li>
-                            <li><a href="#">Mobile Design</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- / Column #2 -->
-
-                <!-- Column #3 -->
-                <div class="uk-width-small-1-2 uk-width-medium-1-4">
-                    <div class="gb-footer__col">
-                        <h4>CMS</h4>
-                        <!-- Column Title -->
-
-                        <ul>
-                            <!-- Link List -->
-                            <li><a href="#">Drupal</a></li>
-                            <li><a href="#">WordPress</a></li>
-                            <li><a href="#">Joomla</a></li>
-                            <li><a href="#">Magento</a></li>
-                            <li><a href="#">ForkCMS</a></li>
-                            <li><a href="#">OctoberCMS</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- / Column #3 -->
-
-                <!-- Column #4 -->
-                <div class="uk-width-small-1-2 uk-width-medium-1-4">
-                    <div class="gb-footer__col">
-                        <h4>WordPress</h4>
-                        <!-- Column Title -->
-
-                        <ul>
-                            <!-- Link List -->
-                            <li><a href="#">WordPress Frameworks</a></li>
-                            <li><a href="#">WordPress Starter Themes</a></li>
-                            <li><a href="#">WordPress Themes</a></li>
-                            <li><a href="#">WordPress Plugins</a></li>
-                            <li><a href="#">WordPress eCommerce</a></li>
-                            <li><a href="#">WooCommerce Plugins</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- / Column #4 -->
-
-            </div>
-            <!-- / Footer Columns with Heading and Links -->
-
-            <!-- Footer Navigation Links -->
-            <div class="gb-footer__nav">
-                <a href="page.html">About</a>
-                <a href="page.html">Contact</a>
-                <a href="page.html">Advertise</a>
-                <a href="page.html">Contribute</a>
-                <a href="page.html">Privacy</a>
-            </div>
-            <!-- / Footer Navigation Links -->
-
-            <!-- Credits? i dunno. -->
-            <div class="gb-footer__copyright">
-                Copyright © 2020 SabzevarLug
+                    </div> <!-- /.row -->
+                </div><!-- /.container -->
             </div>
         </div>
-    </footer>
-    <!-- / Site's Footer -->
+    </div>  <!-- /.site-wrapper -->
 
-    <!-- UIKit Offcanvas/Mobile Menu: getuikit.com/v2/docs/offcanvas.html  -->
-    <!-- Mobile Menu Contents -->
-    <div id="mobile-menu" class="uk-offcanvas">
-        <div class="uk-offcanvas-bar">
-            <ul class="uk-nav uk-nav-offcanvas uk-nav-parent-icon" data-uk-nav="{multiple:true}">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="archive-categories.html">Tutorials</a></li>
-                <li><a href="archive-categories.html">Random</a></li>
-                <li class="uk-nav-header">Social Media</li>
-                <!-- Heading within Menu -->
-                <li><a href="#">Facebook</a></li>
-                <li><a href="#">Google+</a></li>
-                <li><a href="#">Twitter</a></li>
-                <li><a href="#">RSS Feed</a></li>
-            </ul>
+    <!-- Canvas -->
+    <div id="off-canvas" >
+        <div class="off-canvas-wrap" >
+            <div id="text-5" class="widget widget_text" style="  background-color: #555555;">
+                <h3 class="widget-title">About Mountain</h3>            
+                <div class="textwidget">
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived</p>
+                    <div class="social-links">
+                        <a target="_blank" href="https://twitter.com/themesflat">
+                            <i class="fa fa-twitter"></i></a>
+                        <a target="_blank" href="https://facebook.com/themesflat"><i class="fa fa-facebook"></i></a>
+                        <a target="_blank" href="#"><i class="fa fa-instagram"></i></a>
+                        <a target="_blank" href="#"><i class="fa fa-behance"></i></a>
+                        <a target="_blank" href="#"><i class="fa fa-rss"></i></a>
+                    </div>
+                </div>
+            </div>      
         </div>
     </div>
-    <!-- / Mobile Menu Contents -->
+
+    <!-- Go Top -->
+    <a class="go-top">
+    </a> 
+    
+    <!-- Javascript -->
+    <script type="text/javascript" src="{% static 'javascript/jquery.min.js'%}"></script>
+    <script type="text/javascript" src="{% static 'javascript/bootstrap.min.js'%}"></script>
+    <script type="text/javascript" src="{% static 'javascript/jquery.flexslider-min.js'%}"></script>
+    <script type="text/javascript" src="{% static 'javascript/jquery.magnific-popup.min.js'%}"></script>   
+    <script type="text/javascript" src="{% static 'javascript/jquery.easing.js'%}"></script>
+    <script type="text/javascript" src="{% static 'javascript/imagesloaded.min.js'%}"></script>
+    <script type="text/javascript" src="{% static 'javascript/jquery.isotope.min.js'%}"></script>
+    <script type="text/javascript" src="{% static 'javascript/jquery.cookie.js'%}"></script>    
+    <script type="text/javascript" src="{% static 'javascript/main.js'%}"></script>
 </body>
-
 </html>

@@ -1,0 +1,68 @@
+/**
+  * Color
+  * Border Color
+  * Background Color
+*/
+
+/* Color
+-------------------------------------------------------------- */
+a ,
+.widget.widget_text .readmore:hover,
+.widget.widget_meta ul li a:hover,
+.blog .entry .main-post .entry-title a:hover,
+.tp-banner-container .tp-caption > a:hover ,
+.grid-simple-layout .project-info-wrap .project-title a:hover ,
+.grid-simple-layout .project-info-wrap .project-categories li a:hover,
+.breadcrumbs ul li a:hover, .breadcrumbs ul li.active,
+.blog .entry .main-post .more-link:hover,
+.menu-extra .shopping-cart .submenu .widget_shopping_cart_content ul li .content-box a:hover,
+.flat-information .wrapbutton-information .link:hover,
+.project-single .project-content .project-categories a:hover,
+.flat-about .page-title.style1 .breadcrumbs ul li.active,
+.woocommerce-content-top .widget.widget_price_filter .price_slider_wrapper .price_slider_amount .price_label .button:hover,
+.shop-detail.woocommerce .price .amount,
+.shop-detail .summary .product_meta span a:hover,
+.navigation .nav-links li a:hover
+{
+	color: #5bac72;
+}
+
+/* Border Color
+-------------------------------------------------------------- */
+a.link,
+.flat-project .project-filter li.active a, 
+.flat-project .project-filter li:hover a ,
+.woocommerce.widget_price_filter .price_slider_wrapper .ui-slider .ui-slider-handle span.shadow,
+.woocommerce-content-top .widget.widget_price_filter .price_slider_wrapper .price_slider_amount .price_label .button
+{
+	border-color: #5bac72;
+}
+
+.woocommerce.woocommerce-content-product .product-wrap .product-thumbnail span.onsale:after {
+	border-color: #5bac72;
+    border-right-color: transparent ;
+}
+
+/* Background Color
+-------------------------------------------------------------- */
+.switcher-container h2 a,.flex-direction-nav a:hover,.block-loader ,
+.blog .entry .main-post .more-link:after,
+button, input[type="button"], input[type="reset"], input[type="submit"], .button,
+.project-single .project-content .project-tags a:hover, 
+.project-single .project-content .project-tags a:hover:after,
+.woocommerce .star-rating span,
+.woocommerce.woocommerce-content-product .product-wrap .product-thumbnail span.onsale,
+.comment-respond .comment-form .form-submit input.submit,
+.flat-contact-form .send-wrap input.submit,
+.blog .entry .entry-date,
+.widget.widget_text .readmore:after,
+.flat-pagination.page.numeric ul > li.active > a,
+.blog-single .entry .entry-footer .entry-tags a:hover, 
+.blog-single .entry .entry-footer .entry-tags a:hover:after,
+.widget.widget_tag_cloud .tagcloud a:hover, 
+.widget.widget_tag_cloud .tagcloud a:hover:after,
+.btn-menu,
+.switcher-container a.sw-click
+{
+	background-color: #5bac72;
+}
