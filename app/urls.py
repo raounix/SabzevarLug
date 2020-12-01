@@ -13,6 +13,6 @@ urlpatterns=[
     path(r"topics/<slug:slug>",views.PostPage,name='PostPage'),
     path(r"speakers",views.PostPage,name='PostPage'),
     path(r"speakers/<slug:slug>",views.PostPage,name='PostPage'),
-    path(r"images",views.PostPage,name='PostPage'),
+    path(r"images",views.Meet_Image,name='Meet_Image'),
     
 ]

@@ -1,0 +1,71 @@
+{% extends 'app_html/base.html' %}
+{% load static %}
+{% load spl %} 
+{% block main %}
+     
+        <div class="gallery-alt-layout">
+            <div class="container">
+                <div class="row">
+                    <div class="flat-project flat-animation" data-animation="flipInY" data-animation-delay="0" data-animation-offset="75%">
+                        <div class="controlnav-folio">
+                            <a class="projects-filter-toggler">
+                                <span>Toggle Filter</span>
+                            </a>
+                            <ul class="project-filter">
+                                <li class="active"><a data-filter="*" href="#">All</a></li>
+                                <li><a data-filter=".design" href="#">Design</a></li>
+                                <li><a data-filter=".handmade" href="#">Handmade</a></li>
+                                <li><a data-filter=".startup" href="#">Startup</a></li>
+                                <li><a data-filter=".photography" href="#">Photography</a></li>
+                            </ul><!-- /.project-filter -->
+                        </div>
+                        <div class="project-wrap four-columns ">
+                           
+                            <div class="entry project-item design handmade photography startup">
+                                <div class="item-wrap">
+                                    <div class="project-thumb">
+                                        <a href="gallery-grid.html">
+                                          <img src="{% static 'img/default/news.jpg'%}" alt="image">
+                                        </a>
+                                    </div>
+                                    <div class="project-info">
+                                        <div class="project-info-wrap">
+                                            <h3 class="project-title">
+                                                <a href="gallery-grid.html">Luxury knitwear from Scotland</a>
+                                            </h3>
+                                            <ul class="project-categories">
+                                                <li><a href="#">Design</a></li>
+                                                <li><a href="#">Handmade</a></li>
+                                                <li><a href="#">Photography</a></li>
+                                                <li><a href="#">Startup</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>                                
+                                </div><!-- /.item-wrap -->
+                            </div><!-- /.project-item -->
+
+                        </div><!-- /.project-wrap -->
+                    </div><!-- /.flat-project -->
+                </div><!-- /.row -->
+            </div><!-- /.container -->
+        </div>
+
+        <div class="flat-divider d100px"></div>
+
+        {% endblock %}
+
+
+{% block scripts %}
+    <script type="text/javascript" src="{% static 'javascript/owl.carousel.js'%}"></script>
+    <script type="text/javascript" src="{% static 'javascript/smoothscroll.js'%}"></script>    
+    <script type="text/javascript" src="{% static 'javascript/parallax.js'%}"></script>
+    <script type="text/javascript" src="{% static 'javascript/jquery-waypoints.js'%}"></script>
+
+    <!-- Revolution Slider -->
+    <script type="text/javascript" src="{% static 'javascript/jquery.themepunch.tools.min.js'%}"></script>
+    <script type="text/javascript" src="{% static 'javascript/jquery.themepunch.revolution.min.js'%}"></script>
+    <script type="text/javascript" src="{% static 'javascript/slider.js'%}"></script>
+
+
+
+{% endblock %}

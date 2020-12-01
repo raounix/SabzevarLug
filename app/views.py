@@ -64,7 +64,9 @@ def News_Post(request,slug):
 
 
 def Meet_Image(request):
-    pass
+    return render(request,"app_html/meet_image.html")
+
+
 
 
 def Meet_Image_Desc(request,slug):
