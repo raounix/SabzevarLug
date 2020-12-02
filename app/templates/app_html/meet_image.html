@@ -20,30 +20,32 @@
                             </ul><!-- /.project-filter -->
                         </div>
                         <div class="project-wrap four-columns ">
-                           
+                            {% for article in images %}
                             <div class="entry project-item design handmade photography startup">
                                 <div class="item-wrap">
                                     <div class="project-thumb">
                                         <a href="gallery-grid.html">
-                                          <img src="{% static 'img/default/news.jpg'%}" alt="image">
+                                        
+                                          <img src="../../static/img/meet/{{article.image.url|cut}}" alt="image">
+                                          
                                         </a>
                                     </div>
                                     <div class="project-info">
                                         <div class="project-info-wrap">
-                                            <h3 class="project-title">
-                                                <a href="gallery-grid.html">Luxury knitwear from Scotland</a>
-                                            </h3>
-                                            <ul class="project-categories">
+                                            <h2 class="project-title">
+                                                <a href="/images/{{article.Slug}}">{{article.Title}}</a>
+                                            </h2>
+                                            {% comment %} <ul class="project-categories">
                                                 <li><a href="#">Design</a></li>
                                                 <li><a href="#">Handmade</a></li>
                                                 <li><a href="#">Photography</a></li>
                                                 <li><a href="#">Startup</a></li>
-                                            </ul>
+                                            </ul> {% endcomment %}
                                         </div>
                                     </div>                                
                                 </div><!-- /.item-wrap -->
                             </div><!-- /.project-item -->
-
+                            {% endfor %}
                         </div><!-- /.project-wrap -->
                     </div><!-- /.flat-project -->
                 </div><!-- /.row -->
@@ -51,7 +53,32 @@
         </div>
 
         <div class="flat-divider d100px"></div>
+                   <div class="flat-pagination page numeric">
+                        <ul>
+                            
+                            
+                           
+                    
+                    {% if number < 7 %}
+                        {% with ''|center:number as range %}
+                            {% for r in range %}
+                                <li> <a href="?page={{forloop.counter}} ">{{forloop.counter}}</a></li>
 
+                
+                                
+                            {% endfor %}    
+                        {% endwith %}    
+                    
+                    {% else %}
+                    
+                               <li><a href="#">1</a></li> 
+
+                    {% endif %}
+                    
+                     <li><a class="next" href="#">></a></li>
+                        </ul>     
+                    </div>
+                </div><!-- /.row -->
         {% endblock %}
 
 

@@ -14,5 +14,6 @@ urlpatterns=[
     path(r"speakers",views.PostPage,name='PostPage'),
     path(r"speakers/<slug:slug>",views.PostPage,name='PostPage'),
     path(r"images",views.Meet_Image,name='Meet_Image'),
+    path(r"images/<slug:slug>",views.Meet_Image_Desc,name='Meet_Image_Desc')
     
 ]
