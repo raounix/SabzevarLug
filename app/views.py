@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.core.paginator import Paginator
 from django.http import HttpResponse
-from .models import Post,News,Images_Desc
+from .models import Post,News,Images_Info,Images
 # Create your views here.
 from django.core import serializers
 from .models import Post
@@ -64,7 +64,7 @@ def News_Post(request,slug):
 
 
 def Meet_Image(request):
-    image=Images_Desc.objects.all()
+    image=Images_Info.objects.all()
     paginator = Paginator(image,5)
     page_obj = paginator.get_page(1)
 
@@ -74,4 +74,9 @@ def Meet_Image(request):
 
 
 def Meet_Image_Desc(request,slug):
-    pass
+    selected_post=Images_Info.objects.all().filter(Slug=slug)
+    other_image = Images.objects.filter(image_rel__in=selected_post)
+    
+    
+
+    return render(request,"app_html/meet_image_desc.html",{'images':selected_post,'other_image':other_image})

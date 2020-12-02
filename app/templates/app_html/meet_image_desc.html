@@ -1,0 +1,47 @@
+
+        <!-- Gallery list -->
+{% extends 'app_html/base.html' %}
+{% load static %}
+{% load spl %} 
+{% block main %}
+        <section class="gallery-grid">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12"> 
+
+                    {% for article in other_image %}
+                        <div class="project-single project-content-right">
+                           
+                            <div class="project-gallery-list">
+                                <div class="project-gallery-wrap">  
+                                    <div class="project-item w2">
+                                        <a class="popup-gallery" href="../../static/img/meet/{{article.images_url|cut}}">
+                                            <img  src="../../static/img/meet/{{article.images_url|cut}}"  alt="images">
+                                        </a>
+                                    </div>
+                                    
+
+
+                                </div> <!-- /.project-gallery-wrap -->
+                            </div> <!-- /.project-gallery -->
+                        </div> <!-- /.project-single -->
+
+                    {% endfor %}
+                    </div> <!-- /.col-md-12 -->
+                </div><!-- /.row -->
+            </div><!-- /.container -->   
+        </section>
+
+    <!-- Go Top -->
+
+            {% endblock %}
+
+
+    <!-- Javascript -->
+{% block scripts %}
+
+    <script type="text/javascript" src="{% static 'javascript/owl.carousel.js'%}"></script>
+    <script type="text/javascript" src="{% static 'javascript/smoothscroll.js'%}"></script>
+    <script type="text/javascript" src="{% static 'javascript/parallax.js'%}"></script>
+
+{% endblock %}

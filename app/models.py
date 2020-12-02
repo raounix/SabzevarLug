@@ -69,14 +69,14 @@ class News(models.Model):
         return (self.Title)
 
 
-class Images_Desc(models.Model):
+class Images_Info(models.Model):
     Title=models.CharField(max_length=50)
     Slug = models.SlugField(unique=True,blank=True)
     image = models.FileField(upload_to = 'app/static/img/meet',blank=True)
 
 class Images(models.Model):
-    image_rel = models.ForeignKey(Images_Desc, default=None, on_delete=models.CASCADE)
-    images = models.FileField(upload_to = 'app/static/img/meet',blank=True)
+    image_rel = models.ForeignKey(Images_Info, default=None, on_delete=models.CASCADE)
+    images_url = models.FileField(upload_to = 'app/static/img/meet',blank=True)
 
     def __str__(self):
         return self.image_rel.Title
