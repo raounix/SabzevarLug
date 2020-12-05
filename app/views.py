@@ -10,25 +10,22 @@ import datetime
 from os.path import splitext
 
 def Home (request):
-    post = News.objects.filter(Status='p')
-    paginator = Paginator(post,5) # Show 25 contacts per page.
+    news = News.objects.filter(Status='p')
+    events=Event.objects.filter(Status='p')
+    news_paginator = Paginator(news,5) # Show 25 contacts per page.
+    events_paginator = Paginator(events,5) # Show 25 contacts per page.
 
-    page_number = request.GET.get('page')
+
   
     
-    page_obj = paginator.get_page(page_number)
-    number = paginator.num_pages
+    page_obj = news_paginator.get_page(1)
+    
+    number = news_paginator.num_pages
     
 
-    return render(request,"app_html/home.html",{'post':page_obj,'number':number})
+    return render(request,"app_html/home.html",{'post':page_obj,'events':events,'number':number})
 
 
-def PostPage(request,slug):
-    PostBlog = Post.objects.all().filter(Slug = slug)
-
-   
-    
-    return render(request , "app_html/blog-single-without-sidebar.html",{'Postblog':PostBlog})
 
 
 
@@ -63,6 +60,8 @@ def News_Post(request,slug):
 
     return render(request,"app_html/news_post.html",{'news':news})
 
+################################################################################################
+#Meet
 
 def Meet_Image(request):
     image=Images_Info.objects.all()
@@ -81,7 +80,8 @@ def Meet_Image_Desc(request,slug):
     
 
     return render(request,"app_html/meet_image_desc.html",{'images':selected_post,'other_image':other_image})
-
+################################################################################################
+#Event
 
 def Events_Home(request):
     events = Event.objects.filter(Status='p')
@@ -102,7 +102,7 @@ def Events_Post(request,slug):
 
     return render(request,"app_html/events_post.html",{'events':event})
 
-
+################################################################################################
 
 def Topics_Home(request):
     topic = Event.objects.only('Issue')
@@ -113,6 +113,7 @@ def Topics_Post(request,slug):
     print(topic)
     return render(request,"app_html/topics_post.html",{'topics':topic})
 
+################################################################################################
 def Speakers_Home(request):
     speakers = Author.objects.all()
     return render(request,"app_html/speakers.html",{'speakers':speakers})

@@ -35,7 +35,7 @@
             <div class="container">
                 <div class="row">
                     <div class="wrap-entry-masonry">
-                        {% for article in post %}
+                        {% for article in news %}
                         <article class="entry style1" >
                             <div class="entry-date">
                                 <span class="entry-month">{{ article.date | date:"M" }}</span>
@@ -46,12 +46,12 @@
                          
                             
                             <div class="feature-post">
-                                <a href="{{ article.Slug }}" class="img-post"><img src="../../static/img/post/{{article.photo.url|cut}}" alt="image"></a>
+                                <a href="/news/{{ article.Slug }}" class="img-post"><img src="../../static/img/post/{{article.photo.url|cut}}" alt="image"></a>
                             </div><!-- /.feature-post -->
 
                             <div class="main-post" style="direction:rtl;" >
-                                <h2 class="entry-title"><a href="{{ article.Slug }}">{{article.Title}}</a></h2>
-                                <div class="entry-content">{{article.Brief}}<div class="readmore"><a href="{{ article.Slug }}" class="more-link">بیشتر</a></div>
+                                <h2 class="entry-title"><a href="/news/{{ article.Slug }}">{{article.Title}}</a></h2>
+                                <div class="entry-content">{{article.Brief}}<div class="readmore"><a href="/news/{{ article.Slug }}" class="more-link">بیشتر</a></div>
                                 </div>
                             </div><!-- /.main-post -->
                         </article><!-- /.entry -->
@@ -71,23 +71,23 @@
                                     </div><!-- /.container -->                      
                                 </div><!-- /.page-title --> 
                         <div class="wrap-entry-masonry">
-                            {% for article in post %}
+                            {% for event in events %}
                             <article class="entry style1" >
                                 <div class="entry-date">
-                                    <span class="entry-month">{{ article.date | date:"M" }}</span>
-                                    <span class="entry-day"> {{ article.date | date:"d" }}</span>
-                                    <span class="entry-year">{{ article.date | date:"Y" }}</span>
+                                    <span class="entry-month">{{ event.date | date:"M" }}</span>
+                                    <span class="entry-day"> {{ event.date | date:"d" }}</span>
+                                    <span class="entry-year">{{ event.date | date:"Y" }}</span>
                                 
                                 </div>
                          
                             
                                 <div class="feature-post">
-                                    <a href="{{ article.Slug }}" class="img-post"><img src="../../static/img/post/{{article.photo.url|cut}}" alt="image"></a>
+                                    <a href="/events/{{ event.Slug }}" class="img-post"><img src="../../static/img/post/{{event.photo.url|cut}}" alt="image"></a>
                                 </div><!-- /.feature-post -->
 
                                 <div class="main-post" style="direction:rtl;" >
-                                    <h2 class="entry-title"><a href="{{ article.Slug }}">{{article.Title}}</a></h2>
-                                    <div class="entry-content">{{article.Brief}}<div class="readmore"><a href="{{ article.Slug }}" class="more-link">بیشتر</a></div>
+                                    <h2 class="entry-title"><a href="/events/{{ event.Slug }}">{{event.Title}}</a></h2>
+                                    <div class="entry-content">{{artieventcle.Brief}}<div class="readmore"><a href="/events/{{ event.Slug }}" class="more-link">بیشتر</a></div>
                                     </div>
                                 </div><!-- /.main-post -->
                             </article><!-- /.entry -->
