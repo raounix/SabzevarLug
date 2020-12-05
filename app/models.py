@@ -90,6 +90,7 @@ class Calendar(models.Model):
 
 class Event(models.Model):
     Title = models.CharField(max_length=40)
+    Issue=models.CharField(max_length=40)
     Slug = models.SlugField(unique=True)
     Brief = models.TextField(max_length=100)
     MainText=models.TextField()

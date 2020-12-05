@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.core.paginator import Paginator
 from django.http import HttpResponse
-from .models import Post,News,Images_Info,Images,Calendar,Event
+from .models import Post,News,Images_Info,Images,Calendar,Event,Author
 # Create your views here.
 from django.core import serializers
 from .models import Post
@@ -10,7 +10,7 @@ import datetime
 from os.path import splitext
 
 def Home (request):
-    post = Post.objects.filter(Status='p')
+    post = News.objects.filter(Status='p')
     paginator = Paginator(post,5) # Show 25 contacts per page.
 
     page_number = request.GET.get('page')
@@ -102,3 +102,22 @@ def Events_Post(request,slug):
 
     return render(request,"app_html/events_post.html",{'events':event})
 
+
+
+def Topics_Home(request):
+    topic = Event.objects.only('Issue')
+    return render(request,"app_html/topics.html",{'topics':topic})
+
+def Topics_Post(request,slug):
+    topic = Event.objects.all().filter(Issue=slug,Status='p')
+    print(topic)
+    return render(request,"app_html/topics_post.html",{'topics':topic})
+
+def Speakers_Home(request):
+    speakers = Author.objects.all()
+    return render(request,"app_html/speakers.html",{'speakers':speakers})
+
+def Speakers_Post(request,slug):
+    authors=Author.objects.all().filter(Author=slug)
+    speakers = Event.objects.all().filter(author__in=authors)
+    return render(request,"app_html/speakers_post.html",{'speakers':speakers,'author':slug})

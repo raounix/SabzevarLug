@@ -1,0 +1,74 @@
+
+{% extends 'app_html/base.html' %}
+{% load static %}
+{% block main %}
+      <div class="page-title">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="page-title-heading">
+                                <h1 class="title">ارائه دهندگان</h1>
+                            </div><!-- /.page-title-captions --> 
+        
+                        </div><!-- /.col-md-12 -->  
+                    </div><!-- /.row -->  
+                </div><!-- /.container -->                       
+            </div>
+        <!-- Gallery list -->
+        <section class="gallery-list">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="project-single project-content-right">
+                            <div class="project-content">
+                                <div class="project-content-wrap" style="direction:rtl;">
+                                    <div class="project-tags">
+                                    {% for speaker in speakers %}
+                                   
+                                        <a href="/speakers/{{speaker}}">{{speaker}}</a>
+                  
+                                 
+                                    {% endfor %}
+                                    </div>
+                                </div>
+                            </div>
+                           
+                        </div> <!-- /.project-single -->
+
+                        <div class="project-navigation">
+                            <ul>
+                                <li class="previous-post disabled">
+                                    <a href="#"></a>
+                                </li>
+                                
+                                <li class="project-home">
+                                    <a href="#"></a>
+                                </li>
+                                <li class="next-post">
+                                    <a href="#"></a>
+                                </li>          
+                            </ul>
+                        </div>
+                    </div> <!-- /.col-md-12 -->
+                </div><!-- /.row -->
+            </div><!-- /.container -->   
+        </section>
+        
+
+
+
+    <!-- Go Top -->
+    <a class="go-top">
+    </a> 
+    
+    <!-- Javascript -->
+
+{% endblock %}
+
+{% block scripts%}
+
+    <script type="text/javascript" src="{% static 'javascript/owl.carousel.js'%}"></script>
+    <script type="text/javascript" src="{% static 'javascript/smoothscroll.js'%}"></script>    
+    <script type="text/javascript" src="{% static 'javascript/parallax.js'%}"></script>
+    <!-- Javascript -->
+{% endblock %}

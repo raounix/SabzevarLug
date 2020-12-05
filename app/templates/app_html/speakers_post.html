@@ -1,0 +1,109 @@
+{% extends 'app_html/base.html' %}
+{% load static %}
+{% load spl %} 
+{% block main %}
+        <div class="page-title">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="page-title-heading">
+                                <h1 class="title">{{author}} نوشته های </h1>
+                            </div><!-- /.page-title-captions --> 
+        
+                        </div><!-- /.col-md-12 -->  
+                    </div><!-- /.row -->  
+                </div><!-- /.container -->                       
+            </div>
+        <div class="gallery-alt-layout">
+            <div class="container">
+                <div class="row">
+                    <div class="flat-project flat-animation" data-animation="flipInY" data-animation-delay="0" data-animation-offset="75%">
+                        <div class="controlnav-folio">
+                            <a class="projects-filter-toggler">
+                                <span>Toggle Filter</span>
+                            </a>
+                            <ul class="project-filter">
+                                <li class="active"><a data-filter="*" href="#">All</a></li>
+                                <li><a data-filter=".design" href="#">Design</a></li>
+                                <li><a data-filter=".handmade" href="#">Handmade</a></li>
+                                <li><a data-filter=".startup" href="#">Startup</a></li>
+                                <li><a data-filter=".photography" href="#">Photography</a></li>
+                            </ul><!-- /.project-filter -->
+                        </div>
+                        <div class="project-wrap four-columns ">
+                            {% for speaker in speakers %}
+                            <div class="entry project-item design handmade photography startup">
+                                <div class="item-wrap">
+                                    <div class="project-thumb">
+                                        <a href="gallery-grid.html">
+                                        
+                                          <img src="../../static/img/events/{{speaker.photo.url|cut}}" alt="image" style="height:277.5px">
+                                          
+                                        </a>
+                                    </div>
+                                    <div class="project-info">
+                                        <div class="project-info-wrap">
+                                            <h2 class="project-title">
+                                                <a href="/events/{{speaker.Slug}}">{{speaker.Title}}</a>
+                                            </h2>
+                                            {% comment %} <ul class="project-categories">
+                                                <li><a href="#">Design</a></li>
+                                                <li><a href="#">Handmade</a></li>
+                                                <li><a href="#">Photography</a></li>
+                                                <li><a href="#">Startup</a></li>
+                                            </ul> {% endcomment %}
+                                        </div>
+                                    </div>                                
+                                </div><!-- /.item-wrap -->
+                            </div><!-- /.project-item -->
+                            {% endfor %}
+                        </div><!-- /.project-wrap -->
+                    </div><!-- /.flat-project -->
+                </div><!-- /.row -->
+            </div><!-- /.container -->
+        </div>
+
+        <div class="flat-divider d100px"></div>
+                   <div class="flat-pagination page numeric">
+                        <ul>
+                            
+                            
+                           
+                    
+                    {% if number < 7 %}
+                        {% with ''|center:number as range %}
+                            {% for r in range %}
+                                <li> <a href="?page={{forloop.counter}} ">{{forloop.counter}}</a></li>
+
+                
+                                
+                            {% endfor %}    
+                        {% endwith %}    
+                    
+                    {% else %}
+                    
+                               <li><a href="?page=1">1</a></li> 
+
+                    {% endif %}
+                    
+                     <li><a class="next" href="#">></a></li>
+                        </ul>     
+                    </div>
+                </div><!-- /.row -->
+        {% endblock %}
+
+
+{% block scripts %}
+    <script type="text/javascript" src="{% static 'javascript/owl.carousel.js'%}"></script>
+    <script type="text/javascript" src="{% static 'javascript/smoothscroll.js'%}"></script>    
+    <script type="text/javascript" src="{% static 'javascript/parallax.js'%}"></script>
+    <script type="text/javascript" src="{% static 'javascript/jquery-waypoints.js'%}"></script>
+
+    <!-- Revolution Slider -->
+    <script type="text/javascript" src="{% static 'javascript/jquery.themepunch.tools.min.js'%}"></script>
+    <script type="text/javascript" src="{% static 'javascript/jquery.themepunch.revolution.min.js'%}"></script>
+    <script type="text/javascript" src="{% static 'javascript/slider.js'%}"></script>
+
+
+
+{% endblock %}
