@@ -23,7 +23,7 @@ def Home (request):
     number = news_paginator.num_pages
     
 
-    return render(request,"app_html/home.html",{'post':page_obj,'events':events,'number':number})
+    return render(request,"app_html/home.html",{'news':page_obj,'events':events,'number':number})
 
 
 
