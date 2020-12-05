@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.core.paginator import Paginator
 from django.http import HttpResponse
-from .models import Post,News,Images_Info,Images
+from .models import Post,News,Images_Info,Images,Calendar,Event
 # Create your views here.
 from django.core import serializers
 from .models import Post
@@ -39,8 +39,9 @@ def PostPage(request,slug):
 # def noext(value):
 #     return splitext(value)[0]
 
-def Calendar(request):
-    return HttpResponse('ok')
+def Calendar_Content(request):
+    contents = Calendar.objects.all()
+    return render(request , "app_html/calendar.html",{"contents":contents})
 
 
 def News_Home(request):
@@ -48,7 +49,7 @@ def News_Home(request):
     paginator = Paginator(news,5) # Show 25 contacts per page.
 
     page_number = request.GET.get('page')
-  
+    
     
     page_obj = paginator.get_page(page_number)
     number = paginator.num_pages
@@ -80,3 +81,24 @@ def Meet_Image_Desc(request,slug):
     
 
     return render(request,"app_html/meet_image_desc.html",{'images':selected_post,'other_image':other_image})
+
+
+def Events_Home(request):
+    events = Event.objects.filter(Status='p')
+    paginator = Paginator(events,5) # Show 25 contacts per page.
+
+    page_number = request.GET.get('page')
+  
+    
+    page_obj = paginator.get_page(page_number)
+    number = paginator.num_pages
+    
+
+    return render(request,"app_html/events.html",{'events':page_obj,'number':number})
+
+def Events_Post(request,slug):
+
+    event = Event.objects.all().filter(Slug = slug,Status='p')
+
+    return render(request,"app_html/events_post.html",{'events':event})
+

@@ -1,0 +1,58 @@
+{% extends 'app_html/base.html' %}
+{% load static %}
+{% load spl %} 
+{% block main %}
+     {% for content in contents  %}
+            <!-- Page title -->
+            <div class="page-title">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="page-title-heading">
+                                <h1 class="title">{{content.Title}}</h1>
+                            </div><!-- /.page-title-captions --> 
+        
+                        </div><!-- /.col-md-12 -->  
+                    </div><!-- /.row -->  
+                </div><!-- /.container -->                       
+            </div><!-- /.page-title --> 
+        </div> <!-- /.wrap-slider -->
+
+        <!-- Blog single -->
+        <section class="blog blog-single without-sidebar" style="direction:rtl;">
+            <div class="container">
+                <div class="row">
+     
+                    <div class="col-md-12">
+                        <div class="post-wrap">
+                            <article class="entry">
+                                <h2 class="entry-title">
+                                    {{content.Title}}
+                                </h2>
+                                <div class="entry-wrapper">
+                                    <div class="entry-content">
+                                        <p>{{content.MainText}}                                        
+                                    
+                                        </p>
+                                    </div><!-- /entry-content -->
+                                </div>
+                                <div class="entry-footer">
+                                    <div class="entry-tags">
+                                        <a href="#">Design</a> 
+                                        <a href="#">Illustrator</a>               
+                                    </div>
+                                </div>
+                            </article><!-- /.entry -->
+                           
+          
+                        </div><!-- /.post-wrap -->
+                    </div>
+                </div><!-- /.row -->
+            </div><!-- /.container -->   
+        </section>
+    {% endfor %}
+{% endblock %}
+{% block scripts %}
+    <script type="text/javascript" src="{% static 'javascript/owl.carousel.js'%}"></script>
+    <script type="text/javascript" src="{% static 'javascript/parallax.js'%}"></script>
+{% endblock %}

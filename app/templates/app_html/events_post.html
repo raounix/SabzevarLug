@@ -1,0 +1,100 @@
+{% extends 'app_html/base.html' %}
+{% load static %}
+{% load spl %} 
+
+{% block main %}
+{% for event in events %} 
+            <!-- Page title  -->
+            <div class="page-title style1 parallax parallax1">
+                <div class="overlay"></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="page-title-heading">
+                                <h1 class="title">{{event.Title}}</h1>
+                            </div><!-- /.page-title-captions --> 
+                            <div class="breadcrumbs">
+                                <ul>
+                                    <li><a href="#">Post</a></li>
+                                    <li><a href="#">{{event.Title}}</a></li>
+                         
+                                </ul>                   
+                            </div><!-- /.breadcrumbs -->
+                        </div><!-- /.col-md-12 -->  
+                    </div><!-- /.row -->  
+                </div><!-- /.container -->                      
+            </div><!-- /.page-title -->
+
+
+        <!-- Blog single -->
+        <section class="blog blog-single without-sidebar">
+            <div class="container">
+                <div class="row" style="direction:rtl;">
+                    <div class="col-md-12">
+                        <div class="post-wrap">
+                            <article class="entry">
+                                <div class="entry-wrapper">
+                                    <div class="entry-content" >
+            
+                                        <p> <h4>{{event.MainText}}</h4>
+                                        </p>
+                                        <p>
+                                            <img class="alignnone" src="../../static/img/events/{{event.photo.url|cut}}" alt="images">
+                                        </p>
+                                        <p>
+                                            Patrik says his Swedish upbringing made him environmentally conscious and the long winters are a challenge to make the best out of bad conditions. “It’s very Swedish to grow up with a strong sense and respect for nature for some reason,” he says. “Maybe it comes with the very varying seasons.”
+                                        </p>
+                                        <p>
+                                            Patrik plans to showcase images of the tree over time in galleries in the region, and will keep adding to the tree’s story over time: “The tree is the main character, but the stories wrap around it more than the tree is telling them, and each photo has its own story.
+                                        </p>    
+
+                                    </div><!-- /entry-content -->
+                                </div>
+                            </article><!-- /.entry -->
+                            <div class="navigation post-navigation">
+                                <ul class="nav-links">
+                                  
+                      
+                                </ul><!-- .nav-links -->
+                            </div>
+                            <div id="respond" class="comment-respond">
+                                <h3 class="title comment-title">Leave a Reply</h3>
+                                <form action="#" method="post" id="commentform" class="comment-form" novalidate=""> 
+                                    <p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> Required fields are marked <span class="required">*</span></p>                     
+                                    <div class="comment-infor">
+                                        <fieldset class="name-container">
+                                        
+                                            <input type="text" id="author" placeholder="Name"  class="tb-my-input" name="author" tabindex="1" value="" size="32" aria-required="true">
+                                        </fieldset>
+                                        
+                                        <fieldset class="email-container">
+                                            
+                                            <input type="text" id="email" placeholder="Email" class="tb-my-input" name="email" tabindex="2" value="" size="32" aria-required="true">
+                                        </fieldset> 
+                                        <fieldset class="email-container">
+                                            
+                                            <input type="text" id="website" placeholder="Website" class="tb-my-input" name="email" tabindex="2" value="" size="32" aria-required="true">
+                                        </fieldset>
+                                    </div>
+                                    <div class="comment-message">
+                                        <fieldset class="message">
+                                            <textarea id="comment-message" name="comment" rows="8" tabindex="4"></textarea>
+                                        </fieldset>
+                                    </div>
+                                    
+                                    <p class="form-submit">
+                                    <input name="submit" type="submit" id="comment-reply" class="submit" value="Post Comment"> 
+                                    <input type="hidden" name="comment_post_ID" value="27" id="comment_post_ID">
+                                    <input type="hidden" name="comment_parent" id="comment_parent" value="0">
+                                        </p>                
+                                </form>
+                            </div><!-- /#respond -->
+                        </div><!-- /.post-wrap -->
+                    </div>
+                </div><!-- /.row -->
+            </div><!-- /.container -->   
+        </section>
+
+
+{% endfor %}
+{% endblock %}

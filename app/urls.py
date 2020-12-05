@@ -3,10 +3,9 @@ from app import views
 
 urlpatterns=[
     path("",views.Home),
-    path(r"calendar",views.Calendar),
-    path(r"calendar/<slug:slug>",views.PostPage,name='PostPage'),
-    path(r"events",views.PostPage,name='PostPage'),
-    path(r"events/<slug:slug>",views.PostPage,name='PostPage'),
+    path(r"calendar",views.Calendar_Content),
+    path(r"events",views.Events_Home,name='Events_Home'),
+    path(r"events/<slug:slug>",views.Events_Post,name='Events_Post'),
     path(r"news",views.News_Home,name='News_Home'),
     path(r"news/<slug:slug>",views.News_Post,name='News_Post'),
     path(r"topics",views.PostPage,name='PostPage'),
