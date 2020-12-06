@@ -1,12 +1,7 @@
 from django.shortcuts import render
 from django.core.paginator import Paginator
-from django.http import HttpResponse
 from .models import News,Images_Info,Images,Calendar,Event,Author
 # Create your views here.
-from django.core import serializers
-from django import template
-import datetime
-from os.path import splitext
 
 def Home (request):
     news = News.objects.filter(Status='p')
