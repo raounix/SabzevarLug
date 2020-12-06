@@ -39,32 +39,13 @@
                     </div>
                     <div class="flat-pagination page numeric">
                         <ul>
-                            
-                            {% if users.has_other_pages %}
-  <ul class="pagination">
-    {% if users.has_previous %}
-      <li><a href="?page={{ users.previous_page_number }}">&laquo;</a></li>
-    {% else %}
-      <li class="disabled"><span>&laquo;</span></li>
-    {% endif %}
-    {% for i in users.paginator.page_range %}
-      {% if users.number == i %}
-        <li class="active"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
-      {% else %}
-        <li><a href="?page={{ i }}">{{ i }}</a></li>
-      {% endif %}
-    {% endfor %}
-    {% if users.has_next %}
-      <li><a href="?page={{ users.next_page_number }}">&raquo;</a></li>
-    {% else %}
-      <li class="disabled"><span>&raquo;</span></li>
-    {% endif %}
-  </ul>
-{% endif %}
-                           
+                          
+                       
                     
-                    {% if number < 7 and number > 0 %}
+                    {% comment %} {% if number < 7 and number > 0 %} {% endcomment %}
+                        
                         {% with ''|center:number as range %}
+
                             {% for r in range %}
                                 <li> <a href="?page={{forloop.counter}} ">{{forloop.counter}}</a></li>
 
@@ -73,12 +54,19 @@
                             {% endfor %}    
                         {% endwith %}    
                     
-                    {% else %}
+                    {% comment %} {% else %}
                                 <li> <a href="?page=1 ">1</a></li>
                                <li>...</li> 
-
+                               {% if page > 1 %}
+                               {% with alpha=page|add:"-1" beta=page gamma=page|add:"1" %}
+                                    <li> <a href="?page={{alpha}} ">{{alpha}}</a></li>
+                                    <li> <a href="?page={{beta}} ">{{beta}}</a></li>
+                                    <li> <a href="?page={{gamma}} ">{{gamma}}</a></li>
+                                {% endwith %}
+                                {% endif %}
+                                <li> <a href="?page={{number}} ">{{number}}</a></li>
                     {% endif %}
-                    
+                     {% endcomment %}
                      <li><a class="next" href="#">></a></li>
                         </ul>     
                     </div>

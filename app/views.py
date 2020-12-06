@@ -81,14 +81,14 @@ def Events_Home(request):
     events = Event.objects.filter(Status='p')
     paginator = Paginator(events,5) # Show 25 contacts per page.
 
-    page_number = request.GET.get('page')
+    page_number = int(request.GET.get('page'))
   
     
     page_obj = paginator.get_page(page_number)
     number = paginator.num_pages
     
 
-    return render(request,"app_html/events.html",{'events':page_obj,'number':6})
+    return render(request,"app_html/events.html",{'events':page_obj,'number':10,'page':page_number})
 
 def Events_Post(request,slug):
 
