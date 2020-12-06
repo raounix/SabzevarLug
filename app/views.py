@@ -15,7 +15,7 @@ def Home (request):
     page_obj = news_paginator.get_page(1)
     
     number = news_paginator.num_pages
-    
+
 
     return render(request,"app_html/home.html",{'news':page_obj,'events':events,'number':number})
 
@@ -88,7 +88,7 @@ def Events_Home(request):
     number = paginator.num_pages
     
 
-    return render(request,"app_html/events.html",{'events':page_obj,'number':number})
+    return render(request,"app_html/events.html",{'events':page_obj,'number':6})
 
 def Events_Post(request,slug):
 
