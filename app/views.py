@@ -103,6 +103,7 @@ def Events_Post(request,slug):
     return render(request,"app_html/events_post.html",{'events':event})
 
 ################################################################################################
+#Topics
 
 def Topics_Home(request):
     topic = Event.objects.only('Issue')
@@ -110,10 +111,12 @@ def Topics_Home(request):
 
 def Topics_Post(request,slug):
     topic = Event.objects.all().filter(Issue=slug,Status='p')
-    print(topic)
+    
     return render(request,"app_html/topics_post.html",{'topics':topic})
 
 ################################################################################################
+#Speakers
+
 def Speakers_Home(request):
     speakers = Author.objects.all()
     return render(request,"app_html/speakers.html",{'speakers':speakers})
