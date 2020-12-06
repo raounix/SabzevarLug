@@ -21,28 +21,7 @@ class Tag(models.Model):
         return (self.tag)
 
 
-class Post(models.Model):
-    
-    Title = models.CharField(max_length=40)
-    Slug = models.SlugField(unique=True)
-    Brief = models.TextField(max_length=100)
-    MainText=models.TextField()
-    PostTag = models.ForeignKey(Tag,on_delete=models.CASCADE)
-    author = models.ForeignKey(Author,on_delete=models.CASCADE)
-    date = models.DateTimeField(auto_now_add=True)
-    photo = models.ImageField(upload_to='app/static/img/post'  , null=True)
-    Status=models.CharField(max_length=20,choices=Statuses,default='p')
 
-    
-
-
-    class Meta:
-        ordering = ['-date',]
-    
-
-
-    def __str__(self):
-        return (self.Title)
 
 
 class News(models.Model):
