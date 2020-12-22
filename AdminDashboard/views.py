@@ -5,4 +5,8 @@ from django.http import HttpResponse
 
 
 def MainPage(request):
-    return render(request,"Dashboard/form-quill-editor.html")
+    return render(request,"Dashboard/post_editor.html")
+
+def Submit_Post_Change(request):
+    print(request.POST['text'])
+    return HttpResponse("ok")

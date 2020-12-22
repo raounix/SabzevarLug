@@ -4,6 +4,7 @@
 
         <div class="content-overlay"></div>
         <div class="header-navbar-shadow"></div>
+        
         <div class="content-wrapper">
             <div class="content-header row">
                 <div class="content-header-left col-md-9 col-12 mb-2">
@@ -22,11 +23,12 @@
 
                 <!-- full Editor start -->
                 <section class="full-editor">
+
                     <div class="row">
 
                                             <div class="col-md-6 col-12">
                                                 <div class="form-group mb-2">
-                                                    <label for="blog-edit-title ">موضوع</label>
+                                                    <label for="blog-edit-title">موضوع</label>
                                                     <input type="text" id="blog-edit-title" class="form-control"  />
                                                 </div>
                                             </div>
@@ -34,7 +36,7 @@
                                             <div class="col-md-6 col-12">
                                                 <div class="form-group mb-2">
                                                     <label for="blog-edit-title ">آدرس پست</label>
-                                                    <input type="text" id="blog-edit-title" class="form-control"  />
+                                                    <input type="text" id="blog-edit-address" class="form-control"  />
                                                 </div>
                                             </div>
                         <div class="col-12">
@@ -50,9 +52,8 @@
                                         <div class="col-sm-12">
                                             <div id="full-wrapper">
                                                 <div id="full-container">
-                                                    <div class="editor">
-                                                     
-                                                        <p class="card-text"><br /></p>
+                                                    <div class="editor" id="text_edit">
+                                                        <p class="card-text" ><br /></p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -62,19 +63,45 @@
                             </div>
                         </div>
                     </div>
+
                 </section>
                 <!-- full Editor end -->
 
             </div>
         </div>
          <div class="col-12 mt-50">
-                                                <button type="submit" class="btn btn-primary mr-1">ثبت تغییرات</button>
+                                                <button type="button" onclick="submit_change()" class="btn btn-primary mr-1">ثبت تغییرات</button>
                                             </div>
+
     {% endblock %}
  {% block scripts %}
      <script src="{% static 'app-assets/vendors/js/editors/quill/katex.min.js' %}"></script>
     <script src="{% static 'app-assets/vendors/js/editors/quill/highlight.min.js' %}"></script>
     <script src="{% static 'app-assets/vendors/js/editors/quill/quill.min.js' %}"></script>
     <script src="{% static 'app-assets/js/scripts/forms/form-quill-editor.js' %}"></script>
+    <script >
+    function submit_change(){
+    var Text = document.getElementById("text_edit").innerHTML;
+    $.ajax({
+				type: "POST",
+				url: '{{ 'submit_post_change/' }}',
+				data: { csrfmiddlewaretoken: '{{ csrf_token }}', "text": Text},
+				success: function callback(result){
+								if(result == "ok"){
+									console.log("Raouf")
+						
+								}
+							else if(result == "notvalid"){
+								
+								toastr.error('Username or Password is no Valid')
 
+								
+							}
+								
+
+							}
+});
+
+    }
+    </script>
  {% endblock %}
