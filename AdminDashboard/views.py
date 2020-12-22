@@ -5,4 +5,4 @@ from django.http import HttpResponse
 
 
 def MainPage(request):
-    return HttpResponse("ok")
+    return render(request,"Dashboard/form-quill-editor.html")
