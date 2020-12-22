@@ -1,0 +1,109 @@
+{
+  "html": "html",
+  "starter_kit": "starter-kit",
+  "documentation": "documentation",
+  "assets": "assets",
+  "app_assets": "app-assets",
+  "assets_path": "../../../assets",
+  "app_assets_path": "../../../app-assets",
+  "vendors_path": "./app-assets/vendors/",
+  "destination": {
+    "js": "app-assets/js",
+    "css": "app-assets/css",
+    "css_rtl": "app-assets/css-rtl",
+    "laravel_js": "../vuexy-html-laravel-template/resources/js",
+    "laravel_css": "../vuexy-html-laravel-template/resources/sass/base"
+  },
+  "source": {
+    "path": "src",
+    "js": "src/js",
+    "sass": "src/scss",
+    "template": "src/template-builder",
+    "documentation": "src/documentation"
+  },
+  "vendors": {
+    "js": [
+      "jquery/jquery.min.js",
+      "popper/popper.min.js",
+      "bootstrap/bootstrap.min.js",
+      "perfectscrollbar/perfect-scrollbar.min.js",
+      "hammer/hammer.min.js",
+      "unison-js/unison-js.min.js",
+      "blockui/blockui.min.js",
+      "pace/pace.min.js",
+      "waves/waves.min.js",
+      "internationalization/i18n.min.js",
+      "internationalization/i18n-xhr.min.js",
+      "internationalization/lang-detector.min.js",
+      "internationalization/i18n-jquery.min.js",
+      "feather-icons/feather-icons.min.js",
+      "forms/spinner/jquery.bootstrap-touchspin.js"
+    ],
+    "css": [
+      "perfect-scrollbar/perfect-scrollbar.min.css",
+      "pace/pace.min.css",
+      "waves/waves.min.css",
+      "flag-icons/flag-icons.min.css",
+      "feather-icons/feather-icons.min.css",
+      "forms/spinner/jquery.bootstrap-touchspin.css"
+    ]
+  },
+  "vertical_menu_template": {
+    "dashboardRename": "dashboard-ecommerce.html",
+    "pugSrc": ["*.pug", "!**/template.pug"]
+  },
+  "vertical_collapsed_menu_template": {
+    "dashboardRename": "dashboard-ecommerce.html",
+    "pugSrc": ["*.pug", "!**/template.pug"]
+  },
+  "vertical_menu_template_dark": {
+    "dashboardRename": "dashboard-ecommerce.html",
+    "pugSrc": ["*.pug", "!**/template.pug"]
+  },
+  "vertical_menu_template_bordered": {
+    "dashboardRename": "dashboard-ecommerce.html",
+    "pugSrc": ["*.pug", "!**/template.pug"]
+  },
+  "vertical_overlay_menu_template": {
+    "dashboardRename": "dashboard-ecommerce.html",
+    "pugSrc": ["*.pug", "!**/template.pug", "!**/layout-2-columns.pug"]
+  },
+  "vertical_modern_menu_template": {
+    "dashboardRename": "dashboard-ecommerce.html",
+    "pugSrc": ["*.pug", "!**/template.pug"]
+  },
+  "horizontal_menu_template": {
+    "dashboardRename": "dashboard-ecommerce.html",
+    "pugSrc": [
+      "*.pug",
+      "!**/template.pug",
+      "!**/layout-collapsed-menu.pug",
+      "!**/vertical-nav-fixed.pug",
+      "!**/vertical-nav-static.pug",
+      "!**/vertical-nav-light.pug",
+      "!**/vertical-nav-dark.pug",
+      "!**/vertical-nav-accordion.pug",
+      "!**/vertical-nav-collapsible.pug",
+      "!**/vertical-nav-flipped.pug",
+      "!**/vertical-nav-native-scroll.pug",
+      "!**/vertical-nav-right-side-icon.pug",
+      "!**/vertical-nav-bordered.pug",
+      "!**/vertical-nav-disabled-link.pug",
+      "!**/vertical-nav-styling.pug",
+      "!**/vertical-nav-tags-pills.pug",
+      "!**/layout-1-column.pug",
+      "!**/layout-2-columns.pug",
+      "!**/layout-content-left-sidebar.pug",
+      "!**/layout-content-left-sticky-sidebar.pug",
+      "!**/layout-content-right-sidebar.pug",
+      "!**/layout-content-right-sticky-sidebar.pug",
+      "!**/layout-fixed-navbar-footer.pug",
+      "!**/layout-fixed-navbar-navigation.pug",
+      "!**/layout-fixed-navbar.pug",
+      "!**/layout-semi-dark.pug",
+      "!**/navbar-fixed-top.pug",
+      "!**/navbar-hide-on-scroll-bottom.pug",
+      "!**/navbar-hide-on-scroll-top.pug"
+    ]
+  }
+}
