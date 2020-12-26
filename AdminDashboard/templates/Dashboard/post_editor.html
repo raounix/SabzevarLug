@@ -26,19 +26,20 @@
 
                     <div class="row">
 
-                                            <div class="col-md-6 col-12">
+                                            <div class="col-md-5 col-12">
                                                 <div class="form-group mb-2">
                                                     <label for="blog-edit-title">موضوع</label>
                                                     <input type="text" id="blog-edit-title" class="form-control"  />
                                                 </div>
                                             </div>
 
-                                            <div class="col-md-6 col-12">
+                                            <div class="col-md-5 col-12">
                                                 <div class="form-group mb-2">
                                                     <label for="blog-edit-title ">آدرس پست</label>
                                                     <input type="text" id="blog-edit-address" class="form-control"  />
                                                 </div>
                                             </div>
+                                            
                         <div class="col-12">
                             <div class="card">
                                 <div class="card-header">
@@ -63,15 +64,30 @@
                             </div>
                         </div>
                     </div>
+                                                             
 
                 </section>
                 <!-- full Editor end -->
 
             </div>
         </div>
-         <div class="col-12 mt-50">
+        <div class="row">
+        <div class="col-5 mt-50">
                                                 <button type="button" onclick="submit_change()" class="btn btn-primary mr-1">ثبت تغییرات</button>
                                             </div>
+        
+        <div class="btn-group col-5 mt-50">
+                                            <button class="btn btn-success dropdown-toggle"  type="button" id="dropdownMenuButton3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                Info
+                                            </button>
+                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton3" >
+                                                <a class="dropdown-item" href="javascript:void(0);">Option 1</a>
+                                                <a class="dropdown-item" href="javascript:void(0);">Option 2</a>
+                                                <a class="dropdown-item" href="javascript:void(0);">Option 3</a>
+                                            </div>
+         </div>
+        </div>
+         
 
     {% endblock %}
  {% block scripts %}
@@ -82,14 +98,16 @@
     <script >
     function submit_change(){
     var Text = document.getElementById("text_edit").innerHTML;
+    var Title = document.getElementById("blog-edit-title").value;
+    var Slug = document.getElementById("blog-edit-address").value;
     $.ajax({
 				type: "POST",
 				url: '{{ 'submit_post_change/' }}',
-				data: { csrfmiddlewaretoken: '{{ csrf_token }}', "text": Text},
+				data: { csrfmiddlewaretoken: '{{ csrf_token }}', "text": Text,"title":Title,"slug":Slug},
 				success: function callback(result){
 								if(result == "ok"){
-									console.log("Raouf")
-						
+									
+						        console.log("ok");
 								}
 							else if(result == "notvalid"){
 								
