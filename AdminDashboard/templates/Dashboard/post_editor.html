@@ -97,7 +97,8 @@
     <script src="{% static 'app-assets/js/scripts/forms/form-quill-editor.js' %}"></script>
     <script >
     function submit_change(){
-    var Text = document.getElementById("text_edit").innerHTML;
+//    var Text = document.getElementById("text_edit")className.innerHTML;
+    var Text=$("#text_edit .ql-editor").html();
     var Title = document.getElementById("blog-edit-title").value;
     var Slug = document.getElementById("blog-edit-address").value;
     $.ajax({

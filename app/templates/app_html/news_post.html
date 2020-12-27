@@ -2,6 +2,7 @@
 {% load static %}
 {% load spl %} 
 
+
 {% block main %}
 {% for post in news %} 
             <!-- Page title  -->
@@ -36,8 +37,8 @@
                                 <div class="entry-wrapper">
                                     <div class="entry-content" >
             
-                                        <p> <h4>{{post.MainText}}</h4>
-                                        </p>
+                                        {{post.MainText|safe}}
+                                        
                                         <p>
                                             <img class="alignnone" src="../../static/img/post/{{post.photo.url|cut}}" alt="images">
                                         </p>

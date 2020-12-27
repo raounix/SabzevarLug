@@ -31,7 +31,9 @@
     <link href="{% static 'icon/apple-touch-icon-48-precomposed.png' %}" rel="apple-touch-icon-precomposed" sizes="48x48">
     <link href="{% static 'icon/apple-touch-icon-32-precomposed.png' %}" rel="apple-touch-icon-precomposed">
     <link href="{% static 'icon/favicon.ico' %}" rel="shortcut icon">
+    {% block link %}
 
+    {% endblock %}
     <!--[if lt IE 9]>
         <script src="javascript/html5shiv.js"></script>
         <script src="javascript/respond.min.js"></script>
