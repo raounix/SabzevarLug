@@ -1,0 +1,130 @@
+{% extends 'Dashboard/base.html' %}
+{% load static %}
+    {% block content %}
+
+        <div class="content-overlay"></div>
+        <div class="header-navbar-shadow"></div>
+        
+        <div class="content-wrapper">
+            <div class="content-header row">
+                <div class="content-header-left col-md-9 col-12 mb-2">
+                    <div class="row breadcrumbs-top">
+                        <div class="col-12">
+                            <h2 class="content-header-title float-left mb-0">ویرایش متن پست</h2>
+                            
+                        </div>
+                    </div>
+                </div>
+          
+            </div>
+            <div class="content-body">
+                <!-- Snow Editor start -->
+ 
+
+                <!-- full Editor start -->
+                <section class="full-editor">
+
+                    <div class="row">
+
+                                            <div class="col-md-5 col-12">
+                                                <div class="form-group mb-2">
+                                                    <label for="blog-edit-title">موضوع</label>
+                                                    <input type="text" id="blog-edit-title" class="form-control"  />
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-5 col-12">
+                                                <div class="form-group mb-2">
+                                                    <label for="blog-edit-title ">آدرس پست</label>
+                                                    <input type="text" id="blog-edit-address" class="form-control"  />
+                                                </div>
+                                            </div>
+                                            
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">ویرایش متن</h4>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text">
+                                       از بخش زیر میتوانید متن مورد نظر را ویرایش کنید.
+                                    </p>
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <div id="full-wrapper">
+                                                <div id="full-container">
+                                                    <div class="editor" id="text_edit">
+                                                        <p class="card-text" ><br /></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                                                             
+
+                </section>
+                <!-- full Editor end -->
+
+            </div>
+        </div>
+        <div class="row">
+        <div class="col-5 mt-50">
+                                                <button type="button" onclick="submit_change()" class="btn btn-primary mr-1">ثبت تغییرات</button>
+                                            </div>
+        
+        <div class="btn-group col-5 mt-50">
+                                            <button class="btn btn-success dropdown-toggle"  type="button" id="dropdownMenuButton3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                Info
+                                            </button>
+                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton3" >
+                                                <a class="dropdown-item" href="javascript:void(0);">Option 1</a>
+                                                <a class="dropdown-item" href="javascript:void(0);">Option 2</a>
+                                                <a class="dropdown-item" href="javascript:void(0);">Option 3</a>
+                                            </div>
+         </div>
+        </div>
+         
+
+    {% endblock %}
+ {% block scripts %}
+     <script src="{% static 'app-assets/vendors/js/editors/quill/katex.min.js' %}"></script>
+    <script src="{% static 'app-assets/vendors/js/editors/quill/highlight.min.js' %}"></script>
+    <script src="{% static 'app-assets/vendors/js/editors/quill/quill.min.js' %}"></script>
+    <script src="{% static 'app-assets/js/scripts/forms/form-quill-editor.js' %}"></script>
+    <script >
+    function submit_change(){
+//    var Text = document.getElementById("text_edit")className.innerHTML;
+    var Text=$("#text_edit .ql-editor").html();
+    var Title = document.getElementById("blog-edit-title").value;
+    var Slug = document.getElementById("blog-edit-address").value;
+    $.ajax({
+				type: "POST",
+				url: '{{ '' }}',
+				data: { csrfmiddlewaretoken: '{{ csrf_token }}', "text": Text,"title":Title,"slug":Slug},
+				success: function callback(result){
+								if(result == "ok"){
+									
+						          toastr.success('با موفقیت ثبت شد',"ثبت شد",{
+                                    positionClass: 'toast-top-center',
+
+                                    rtl:"rtl"
+                                })
+								}
+							else if(result == "notvalid"){
+								
+								toastr.error('Username or Password is no Valid')
+
+								
+							}
+								
+
+							}
+});
+
+    }
+    </script>
+ {% endblock %}

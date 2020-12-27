@@ -96,6 +96,7 @@
     <script src="{% static 'app-assets/vendors/js/editors/quill/quill.min.js' %}"></script>
     <script src="{% static 'app-assets/js/scripts/forms/form-quill-editor.js' %}"></script>
     <script >
+    
     function submit_change(){
 //    var Text = document.getElementById("text_edit")className.innerHTML;
     var Text=$("#text_edit .ql-editor").html();
@@ -103,12 +104,16 @@
     var Slug = document.getElementById("blog-edit-address").value;
     $.ajax({
 				type: "POST",
-				url: '{{ 'submit_post_change/' }}',
+				url: '{{ '' }}',
 				data: { csrfmiddlewaretoken: '{{ csrf_token }}', "text": Text,"title":Title,"slug":Slug},
 				success: function callback(result){
 								if(result == "ok"){
 									
-						        console.log("ok");
+                                    toastr.success('با موفقیت ثبت شد',"ثبت شد",{
+                                    positionClass: 'toast-top-center',
+
+                                    rtl:"rtl"
+                                })
 								}
 							else if(result == "notvalid"){
 								

@@ -36,18 +36,12 @@
                                 <div class="entry-wrapper">
                                     <div class="entry-content" >
             
-                                        <p> <h4>{{event.MainText}}</h4>
-                                        </p>
+                                        
+                                        
                                         <p>
                                             <img class="alignnone" src="../../static/img/events/{{event.photo.url|cut}}" alt="images">
                                         </p>
-                                        <p>
-                                            Patrik says his Swedish upbringing made him environmentally conscious and the long winters are a challenge to make the best out of bad conditions. “It’s very Swedish to grow up with a strong sense and respect for nature for some reason,” he says. “Maybe it comes with the very varying seasons.”
-                                        </p>
-                                        <p>
-                                            Patrik plans to showcase images of the tree over time in galleries in the region, and will keep adding to the tree’s story over time: “The tree is the main character, but the stories wrap around it more than the tree is telling them, and each photo has its own story.
-                                        </p>    
-
+                                        {{event.MainText|safe}}
                                     </div><!-- /entry-content -->
                                 </div>
                             </article><!-- /.entry -->
