@@ -1,11 +1,1 @@
-<svg viewbox="0 0 18 18">
-  <rect class="ql-stroke" height="12" width="12" x="3" y="3"></rect>
-  <rect class="ql-fill" height="2" width="3" x="5" y="5"></rect>
-  <rect class="ql-fill" height="2" width="4" x="9" y="5"></rect>
-  <g class="ql-fill ql-transparent">
-    <rect height="2" width="3" x="5" y="8"></rect>
-    <rect height="2" width="4" x="9" y="8"></rect>
-    <rect height="2" width="3" x="5" y="11"></rect>
-    <rect height="2" width="4" x="9" y="11"></rect>
-  </g>
-</svg>
+<svg viewbox="0 0 18 18"><rect width="12" height="12" x="3" y="3" class="ql-stroke"/><rect width="3" height="2" x="5" y="5" class="ql-fill"/><rect width="4" height="2" x="9" y="5" class="ql-fill"/><g class="ql-fill ql-transparent"><rect width="3" height="2" x="5" y="8"/><rect width="4" height="2" x="9" y="8"/><rect width="3" height="2" x="5" y="11"/><rect width="4" height="2" x="9" y="11"/></g></svg>

@@ -1,14 +1,1 @@
-<svg viewbox="0 0 18 18">
-  <rect class="ql-stroke" height="12" width="12" x="3" y="3"></rect>
-  <rect class="ql-fill" height="12" width="1" x="5" y="3"></rect>
-  <rect class="ql-fill" height="12" width="1" x="12" y="3"></rect>
-  <rect class="ql-fill" height="2" width="8" x="5" y="8"></rect>
-  <rect class="ql-fill" height="1" width="3" x="3" y="5"></rect>
-  <rect class="ql-fill" height="1" width="3" x="3" y="7"></rect>
-  <rect class="ql-fill" height="1" width="3" x="3" y="10"></rect>
-  <rect class="ql-fill" height="1" width="3" x="3" y="12"></rect>
-  <rect class="ql-fill" height="1" width="3" x="12" y="5"></rect>
-  <rect class="ql-fill" height="1" width="3" x="12" y="7"></rect>
-  <rect class="ql-fill" height="1" width="3" x="12" y="10"></rect>
-  <rect class="ql-fill" height="1" width="3" x="12" y="12"></rect>
-</svg>
+<svg viewbox="0 0 18 18"><rect width="12" height="12" x="3" y="3" class="ql-stroke"/><rect width="1" height="12" x="5" y="3" class="ql-fill"/><rect width="1" height="12" x="12" y="3" class="ql-fill"/><rect width="8" height="2" x="5" y="8" class="ql-fill"/><rect width="3" height="1" x="3" y="5" class="ql-fill"/><rect width="3" height="1" x="3" y="7" class="ql-fill"/><rect width="3" height="1" x="3" y="10" class="ql-fill"/><rect width="3" height="1" x="3" y="12" class="ql-fill"/><rect width="3" height="1" x="12" y="5" class="ql-fill"/><rect width="3" height="1" x="12" y="7" class="ql-fill"/><rect width="3" height="1" x="12" y="10" class="ql-fill"/><rect width="3" height="1" x="12" y="12" class="ql-fill"/></svg>
