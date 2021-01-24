@@ -1,4 +1,1 @@
-<svg viewbox="0 0 18 18">
-  <polygon class="ql-fill ql-stroke" points="12 10 14 12 16 10 12 10"></polygon>
-  <path class="ql-stroke" d="M9.91,13.91A4.6,4.6,0,0,1,9,14a5,5,0,1,1,5-5"></path>
-</svg>
+<svg viewbox="0 0 18 18"><polygon points="12 10 14 12 16 10 12 10" class="ql-fill ql-stroke"/><path d="M9.91,13.91A4.6,4.6,0,0,1,9,14a5,5,0,1,1,5-5" class="ql-stroke"/></svg>

@@ -1,5 +1,1 @@
-<svg viewbox="0 0 18 18">
-  <line class="ql-color-label ql-stroke ql-transparent" x1="3" x2="15" y1="15" y2="15"></line>
-  <polyline class="ql-stroke" points="5.5 11 9 3 12.5 11"></polyline>
-  <line class="ql-stroke" x1="11.63" x2="6.38" y1="9" y2="9"></line>
-</svg>
+<svg viewbox="0 0 18 18"><line x1="3" x2="15" y1="15" y2="15" class="ql-color-label ql-stroke ql-transparent"/><polyline points="5.5 11 9 3 12.5 11" class="ql-stroke"/><line x1="11.63" x2="6.38" y1="9" y2="9" class="ql-stroke"/></svg>

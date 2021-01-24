@@ -1,6 +1,1 @@
-<svg viewbox="0 0 18 18">
-  <path class="ql-stroke" d="M5,8a4,4,0,0,0,8,0"></path>
-  <line class="ql-stroke" x1="6" x2="12" y1="15" y2="15"></line>
-  <line class="ql-stroke" x1="9" x2="9" y1="12" y2="15"></line>
-  <rect class="ql-fill" height="8" rx="2" ry="2" width="4" x="7" y="2"></rect>
-</svg>
+<svg viewbox="0 0 18 18"><path d="M5,8a4,4,0,0,0,8,0" class="ql-stroke"/><line x1="6" x2="12" y1="15" y2="15" class="ql-stroke"/><line x1="9" x2="9" y1="12" y2="15" class="ql-stroke"/><rect width="4" height="8" x="7" y="2" class="ql-fill" rx="2" ry="2"/></svg>
