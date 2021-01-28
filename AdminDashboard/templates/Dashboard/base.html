@@ -3,14 +3,14 @@
 <!-- BEGIN: Head-->
 
 <head>
-    {% load static %} 
+    {% load static %}
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
     <meta name="description" content="Vuexy admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities.">
     <meta name="keywords" content="admin template, Vuexy admin template, dashboard template, flat admin template, responsive admin template, web app">
-    <meta name="author" content="PIXINVENT">
-    <title>Quill Editor - Vuexy - Bootstrap HTML admin template</title>
+    <meta name="author" content="Raouf">
+    <title>بخش مدیریت</title>
     <link rel="apple-touch-icon" href="{% static 'app-assets/images/ico/apple-icon-120.png' %}">
     <link rel="shortcut icon" type="image/x-icon" href="{% static 'app-assets/images/ico/favicon.ico' %}">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600" rel="stylesheet">
@@ -26,7 +26,7 @@
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Inconsolata&amp;family=Roboto+Slab&amp;family=Slabo+27px&amp;family=Sofia&amp;family=Ubuntu+Mono&amp;display=swap">
-  
+
     <!-- END: Vendor CSS-->
 
     <!-- BEGIN: Theme CSS-->
@@ -79,98 +79,124 @@
             </div>
             <ul class="nav navbar-nav align-items-center ml-auto">
                 <li class="nav-item dropdown dropdown-language"><a class="nav-link dropdown-toggle" id="dropdown-flag" href="javascript:void(0);" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="flag-icon flag-icon-us"></i><span class="selected-language">English</span></a>
-                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown-flag"><a class="dropdown-item" href="javascript:void(0);" data-language="en"><i class="flag-icon flag-icon-us"></i> English</a><a class="dropdown-item" href="javascript:void(0);" data-language="fr"><i class="flag-icon flag-icon-fr"></i> French</a><a class="dropdown-item" href="javascript:void(0);" data-language="de"><i class="flag-icon flag-icon-de"></i> German</a><a class="dropdown-item" href="javascript:void(0);" data-language="pt"><i class="flag-icon flag-icon-pt"></i> Portuguese</a></div>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown-flag"><a class="dropdown-item" href="javascript:void(0);" data-language="en"><i class="flag-icon flag-icon-us"></i> English</a><a class="dropdown-item" href="javascript:void(0);" data-language="fr"><i class="flag-icon flag-icon-fr"></i> French</a>
+                        <a class="dropdown-item" href="javascript:void(0);" data-language="de"><i class="flag-icon flag-icon-de"></i> German</a><a class="dropdown-item" href="javascript:void(0);" data-language="pt"><i class="flag-icon flag-icon-pt"></i> Portuguese</a></div>
                 </li>
                 <li class="nav-item d-none d-lg-block"><a class="nav-link nav-link-style"><i class="ficon" data-feather="sun"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun ficon"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg></i></a></li>
-               
+
 
                 </li>
-                <li class="nav-item dropdown dropdown-user"><a class="nav-link dropdown-toggle dropdown-user-link" id="dropdown-user" href="javascript:void(0);" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <li class="nav-item dropdown dropdown-user">
+                    <a class="nav-link dropdown-toggle dropdown-user-link" id="dropdown-user" href="javascript:void(0);" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <div class="user-nav d-sm-flex d-none"><span class="user-name font-weight-bolder">John Doe</span><span class="user-status">Admin</span></div><span class="avatar"><img class="round" src="{% static 'app-assets/images/portrait/small/avatar-s-11.jpg' %}" alt="avatar" height="40" width="40"><span class="avatar-status-online"></span></span>
                     </a>
-                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown-user"><a class="dropdown-item" href="page-profile.html"><i class="mr-50" data-feather="user"></i> Profile</a><a class="dropdown-item" href="app-email.html"><i class="mr-50" data-feather="mail"></i> Inbox</a><a class="dropdown-item" href="app-todo.html"><i class="mr-50" data-feather="check-square"></i> Task</a><a class="dropdown-item" href="app-chat.html"><i class="mr-50" data-feather="message-square"></i> Chats</a>
-                        <div class="dropdown-divider"></div><a class="dropdown-item" href="page-account-settings.html"><i class="mr-50" data-feather="settings"></i> Settings</a><a class="dropdown-item" href="page-pricing.html"><i class="mr-50" data-feather="credit-card"></i> Pricing</a><a class="dropdown-item" href="page-faq.html"><i class="mr-50" data-feather="help-circle"></i> FAQ</a><a class="dropdown-item" href="page-auth-login-v2.html"><i class="mr-50" data-feather="power"></i> Logout</a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown-user"><a class="dropdown-item" href="page-profile.html"><i class="mr-50" data-feather="user"></i> Profile</a><a class="dropdown-item" href="app-email.html"><i class="mr-50" data-feather="mail"></i> Inbox</a>
+                        <a class="dropdown-item" href="app-todo.html"><i class="mr-50" data-feather="check-square"></i> Task</a><a class="dropdown-item" href="app-chat.html"><i class="mr-50" data-feather="message-square"></i> Chats</a>
+                        <div class="dropdown-divider"></div><a class="dropdown-item" href="page-account-settings.html"><i class="mr-50" data-feather="settings"></i> Settings</a><a class="dropdown-item" href="page-pricing.html"><i class="mr-50" data-feather="credit-card"></i> Pricing</a>
+                        <a class="dropdown-item" href="page-faq.html"><i class="mr-50" data-feather="help-circle"></i> FAQ</a><a class="dropdown-item" href="page-auth-login-v2.html"><i class="mr-50" data-feather="power"></i> Logout</a>
                     </div>
                 </li>
             </ul>
         </div>
     </nav>
     <ul class="main-search-list-defaultlist d-none">
-        <li class="d-flex align-items-center"><a href="javascript:void(0);">
+        <li class="d-flex align-items-center">
+            <a href="javascript:void(0);">
                 <h6 class="section-label mt-75 mb-0">Files</h6>
-            </a></li>
-        <li class="auto-suggestion"><a class="d-flex align-items-center justify-content-between w-100" href="app-file-manager.html">
+            </a>
+        </li>
+        <li class="auto-suggestion">
+            <a class="d-flex align-items-center justify-content-between w-100" href="app-file-manager.html">
                 <div class="d-flex">
                     <div class="mr-75"><img src="{% static 'app-assets/images/icons/xls.png' %}" alt="png" height="32"></div>
                     <div class="search-data">
                         <p class="search-data-title mb-0">Two new item submitted</p><small class="text-muted">Marketing Manager</small>
                     </div>
                 </div><small class="search-data-size mr-50 text-muted">&apos;17kb</small>
-            </a></li>
-        <li class="auto-suggestion"><a class="d-flex align-items-center justify-content-between w-100" href="app-file-manager.html">
+            </a>
+        </li>
+        <li class="auto-suggestion">
+            <a class="d-flex align-items-center justify-content-between w-100" href="app-file-manager.html">
                 <div class="d-flex">
                     <div class="mr-75"><img src="{% static 'app-assets/images/icons/jpg.png' %}" alt="png" height="32"></div>
                     <div class="search-data">
                         <p class="search-data-title mb-0">52 JPG file Generated</p><small class="text-muted">FontEnd Developer</small>
                     </div>
                 </div><small class="search-data-size mr-50 text-muted">&apos;11kb</small>
-            </a></li>
-        <li class="auto-suggestion"><a class="d-flex align-items-center justify-content-between w-100" href="app-file-manager.html">
+            </a>
+        </li>
+        <li class="auto-suggestion">
+            <a class="d-flex align-items-center justify-content-between w-100" href="app-file-manager.html">
                 <div class="d-flex">
                     <div class="mr-75"><img src="{% static 'app-assets/images/icons/pdf.png' %}" alt="png" height="32"></div>
                     <div class="search-data">
                         <p class="search-data-title mb-0">25 PDF File Uploaded</p><small class="text-muted">Digital Marketing Manager</small>
                     </div>
                 </div><small class="search-data-size mr-50 text-muted">&apos;150kb</small>
-            </a></li>
-        <li class="auto-suggestion"><a class="d-flex align-items-center justify-content-between w-100" href="app-file-manager.html">
+            </a>
+        </li>
+        <li class="auto-suggestion">
+            <a class="d-flex align-items-center justify-content-between w-100" href="app-file-manager.html">
                 <div class="d-flex">
                     <div class="mr-75"><img src="{% static 'app-assets/images/icons/doc.png' %}" alt="png" height="32"></div>
                     <div class="search-data">
                         <p class="search-data-title mb-0">Anna_Strong.doc</p><small class="text-muted">Web Designer</small>
                     </div>
                 </div><small class="search-data-size mr-50 text-muted">&apos;256kb</small>
-            </a></li>
-        <li class="d-flex align-items-center"><a href="javascript:void(0);">
+            </a>
+        </li>
+        <li class="d-flex align-items-center">
+            <a href="javascript:void(0);">
                 <h6 class="section-label mt-75 mb-0">Members</h6>
-            </a></li>
-        <li class="auto-suggestion"><a class="d-flex align-items-center justify-content-between py-50 w-100" href="app-user-view.html">
+            </a>
+        </li>
+        <li class="auto-suggestion">
+            <a class="d-flex align-items-center justify-content-between py-50 w-100" href="app-user-view.html">
                 <div class="d-flex align-items-center">
                     <div class="avatar mr-75"><img src="{% static 'app-assets/images/portrait/small/avatar-s-8.jpg' %}" alt="png" height="32"></div>
                     <div class="search-data">
                         <p class="search-data-title mb-0">John Doe</p><small class="text-muted">UI designer</small>
                     </div>
                 </div>
-            </a></li>
-        <li class="auto-suggestion"><a class="d-flex align-items-center justify-content-between py-50 w-100" href="app-user-view.html">
+            </a>
+        </li>
+        <li class="auto-suggestion">
+            <a class="d-flex align-items-center justify-content-between py-50 w-100" href="app-user-view.html">
                 <div class="d-flex align-items-center">
                     <div class="avatar mr-75"><img src="{% static 'app-assets/images/portrait/small/avatar-s-1.jpg' %}" alt="png" height="32"></div>
                     <div class="search-data">
                         <p class="search-data-title mb-0">Michal Clark</p><small class="text-muted">FontEnd Developer</small>
                     </div>
                 </div>
-            </a></li>
-        <li class="auto-suggestion"><a class="d-flex align-items-center justify-content-between py-50 w-100" href="app-user-view.html">
+            </a>
+        </li>
+        <li class="auto-suggestion">
+            <a class="d-flex align-items-center justify-content-between py-50 w-100" href="app-user-view.html">
                 <div class="d-flex align-items-center">
                     <div class="avatar mr-75"><img src="{% static 'app-assets/images/portrait/small/avatar-s-14.jpg' %}" alt="png" height="32"></div>
                     <div class="search-data">
                         <p class="search-data-title mb-0">Milena Gibson</p><small class="text-muted">Digital Marketing Manager</small>
                     </div>
                 </div>
-            </a></li>
-        <li class="auto-suggestion"><a class="d-flex align-items-center justify-content-between py-50 w-100" href="app-user-view.html">
+            </a>
+        </li>
+        <li class="auto-suggestion">
+            <a class="d-flex align-items-center justify-content-between py-50 w-100" href="app-user-view.html">
                 <div class="d-flex align-items-center">
                     <div class="avatar mr-75"><img src="{% static 'app-assets/images/portrait/small/avatar-s-6.jpg' %}" alt="png" height="32"></div>
                     <div class="search-data">
                         <p class="search-data-title mb-0">Anna Strong</p><small class="text-muted">Web Designer</small>
                     </div>
                 </div>
-            </a></li>
+            </a>
+        </li>
     </ul>
     <ul class="main-search-list-defaultlist-other-list d-none">
-        <li class="auto-suggestion justify-content-between"><a class="d-flex align-items-center justify-content-between w-100 py-50">
+        <li class="auto-suggestion justify-content-between">
+            <a class="d-flex align-items-center justify-content-between w-100 py-50">
                 <div class="d-flex justify-content-start"><span class="mr-75" data-feather="alert-circle"></span><span>No results found.</span></div>
-            </a></li>
+            </a>
+        </li>
     </ul>
     <!-- END: Header-->
 
@@ -221,18 +247,28 @@
                 </li>
                 <li class=" navigation-header"><span data-i18n="Apps &amp; Pages">Posts</span><i data-feather="more-horizontal"></i>
                 </li>
-             
-              
-                <li class=" nav-item"><a class="d-flex align-items-center" href="/manage/news_change"><i data-feather="command"></i><span class="menu-title text-truncate" data-i18n="User">اخبار</span></a>
-                  
-                </li>
-                <li class=" nav-item"><a class="d-flex align-items-center" href="/manage/events_change"><i data-feather="airplay"></i><span class="menu-title text-truncate" data-i18n="User">جلسات</span></a>
-                  
-                </li>
-              
+
+
+                <li class=" nav-item"><a class="d-flex align-items-center"><i data-feather="command"></i><span class="menu-title text-truncate" data-i18n="User">اخبار</span></a>
+                    <ul class="menu-content">
+                        <li><a class="d-flex align-items-center" href="/manage/news/add"><i data-feather="circle"></i><span class="menu-item" data-i18n="Analytics">پست جدید</span></a>
+                        </li>
+                        <li><a class="d-flex align-items-center" href="/manage/news/edit"><i data-feather="circle"></i><span class="menu-item" data-i18n="Analytics">ویرایش پست</span></a>
+                        </li>
                     </ul>
                 </li>
-               
+                <li class=" nav-item"><a class="d-flex align-items-center" href=""><i data-feather="airplay"></i><span class="menu-title text-truncate" data-i18n="User">جلسات</span></a>
+                    <ul class="menu-content">
+                        <li><a class="d-flex align-items-center" href="/manage/events/add"><i data-feather="circle"></i><span class="menu-item" data-i18n="Analytics">پست جدید</span></a>
+                        </li>
+                        <li><a class="d-flex align-items-center" href="/manage/events/edit"><i data-feather="circle"></i><span class="menu-item" data-i18n="Analytics">ویرایش پست</span></a>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+            </li>
+
             </ul>
         </div>
     </div>
@@ -240,8 +276,7 @@
 
     <!-- BEGIN: Content-->
     <div class="app-content content ">
-    {% block content %}
-    {% endblock %}
+        {% block content %} {% endblock %}
 
     </div>
     <!-- END: Content-->
@@ -251,7 +286,9 @@
 
     <!-- BEGIN: Footer-->
     <footer class="footer footer-static footer-light">
-        <p class="clearfix mb-0"><span class="float-md-left d-block d-md-inline-block mt-25">COPYRIGHT &copy; 2020<a class="ml-25" href="https://1.envato.market/pixinvent_portfolio" target="_blank">Pixinvent</a><span class="d-none d-sm-inline-block">, All rights Reserved</span></span><span class="float-md-right d-none d-md-block">Hand-crafted & Made with<i data-feather="heart"></i></span></p>
+        <p class="clearfix mb-0"><span class="float-md-left d-block d-md-inline-block mt-25">COPYRIGHT &copy; 2020<a class="ml-25" href="https://1.envato.market/pixinvent_portfolio" target="_blank">Pixinvent</a><span class="d-none d-sm-inline-block">, All rights Reserved</span></span>
+            <span class="float-md-right d-none d-md-block">Hand-crafted & Made with<i data-feather="heart"></i></span>
+        </p>
     </footer>
     <!-- END: Footer-->
 
@@ -268,9 +305,9 @@
     <script src="{% static 'app-assets/js/core/app-menu.js' %}"></script>
     <script src="{% static 'app-assets/js/core/app.js' %}"></script>
     <script src="{% static 'app-assets/vendors/js/extensions/toastr.min.js' %}"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <!-- END: Theme JS-->
-{% block scripts %}
-{% endblock %}
+    {% block scripts %} {% endblock %}
     <!-- BEGIN: Page JS-->
     <!-- END: Page JS-->
 
@@ -283,8 +320,6 @@
                 });
             }
         })
-
-
     </script>
 </body>
 <!-- END: Body-->
