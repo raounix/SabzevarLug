@@ -25,5 +25,6 @@ def Events_Add(request):
 
 
 def Events_Edit(request):
-    pass
+    event= Event.objects.all()
+    return render(request,"Dashboard/events_edit.html",{'event':event})
 

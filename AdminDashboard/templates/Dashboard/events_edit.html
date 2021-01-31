@@ -1,0 +1,82 @@
+{% extends 'Dashboard/base.html' %} {% load static %} {% load spl %} {% block content %}
+<div class="content-wrapper">
+            <div class="content-header row">
+                <div class="content-header-left col-md-9 col-12 mb-2">
+                    <div class="row breadcrumbs-top">
+                        <div class="col-12">
+                            <h2 class="content-header-title float-left mb-0">Edit Events</h2>
+                          
+                        </div>
+                    </div>
+                </div>
+        
+            </div>
+            <div class="content-body">
+                <!-- Examples -->
+                <section id="card-demo-example">
+                    <div class="row match-height">
+                    {% for post in event%}
+                    
+                        <div class="col-md-4 col-lg-2">
+                        <a>
+                            <div class="card">
+                                <img class="card-img-top" src="../../../static/img/events/{{post.photo.url|cut}}" alt="Card image cap">
+                                <div class="card-body">
+                                    <h4 class="card-title">Card title</h4>
+                                    <p class="card-text">
+                                        Some quick example text to build on the card title and make up the bulk of the card's content.
+                                    </p>
+                                    <a href="javascript:void(0)" class="btn btn-outline-primary waves-effect">Go somewhere</a>
+                                </div>
+                            </div>
+                        </a>
+                        </div>
+                     {% endfor %}
+                    </div>
+                </section>
+                <!-- Examples -->
+
+
+
+            </div>
+        </div>
+
+
+{% endblock %} {% block scripts %}
+<script src="{% static 'app-assets/vendors/js/editors/quill/katex.min.js' %}"></script>
+<script src="{% static 'app-assets/vendors/js/editors/quill/highlight.min.js' %}"></script>
+<script src="{% static 'app-assets/vendors/js/editors/quill/quill.min.js' %}"></script>
+<script src="{% static 'app-assets/js/scripts/forms/form-quill-editor.js' %}"></script>
+<script>
+    function submit_change() {
+        //    var Text = document.getElementById("text_edit")className.innerHTML;
+        var Text = $("#text_edit .ql-editor").html();
+        var Title = document.getElementById("blog-edit-title").value;
+        var Slug = document.getElementById("blog-edit-address").value;
+        $.ajax({
+            type: "POST",
+            url: '',
+            data: {
+                csrfmiddlewaretoken: '{{ csrf_token }}',
+                "text": Text,
+                "title": Title,
+                "slug": Slug
+            },
+            success: function callback(result) {
+                if (result == "ok") {
+
+                    swal("با موفقیت ثبت شد", "", "success")
+                } else if (result == "error") {
+
+                    swal("آدرس پست نامعتبر است .", "", "error")
+
+
+                }
+
+
+            }
+        });
+
+    }
+</script>
+{% endblock %}

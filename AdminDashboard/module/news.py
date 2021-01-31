@@ -22,5 +22,5 @@ def News_Add(request):
 
 
 def News_Edit(request):
-    pass
-
+    news = News.objects.all()
+    return render(request,"Dashboard/news_edit.html",{'news':news})
