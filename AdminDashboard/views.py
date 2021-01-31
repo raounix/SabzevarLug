@@ -52,3 +52,8 @@ def Logout(request):
             return redirect('/manage/login/')
     else:
         return redirect('/manage/login/')
+
+
+
+def test(request):
+    return render(request,"Dashboard/edit_post.html")
