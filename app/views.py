@@ -22,7 +22,6 @@ def Home (request):
 
 
 
-
 # register = template.Library()
 
 

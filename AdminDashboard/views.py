@@ -1,7 +1,7 @@
 from django.shortcuts import render,redirect
 from django.http import HttpResponse
 # Create your views here.
-
+from django.views.decorators.csrf import csrf_protect
 
 from django.contrib.auth import authenticate, login,logout
 

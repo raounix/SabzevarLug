@@ -24,3 +24,29 @@ def News_Add(request):
 def News_Edit(request):
     news = News.objects.all()
     return render(request,"Dashboard/news_edit.html",{'news':news})
+
+
+
+
+def News_Edit_Post(request,slug):
+    post = News.objects.get(Slug=slug)
+    return render(request,"Dashboard/edit_post.html",{'post':post,'type':'post'})
+
+
+
+
+def update(request):
+    
+    post = News.objects.get(Slug=request.POST['blog-edit-slug'])
+    title=request.POST['blog-edit-title']
+    main=request.POST['main_text']
+
+    image =request.FILES['blogCustomFile']
+    post.Title=title
+    post.photo=image
+    post.MainText=main
+    try:
+        post.save()
+        return redirect("/manage/news/edit")
+    except Exception as e:
+        return HttpResponse(e.message)
