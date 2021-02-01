@@ -1,16 +1,1 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg id="canada" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" fill-opacity="14.118" height="480" width="640" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" fill="#28ff09">
- <metadata id="metadata3572">
-  <rdf:RDF>
-   <cc:Work rdf:about="">
-  <dc:format>image/svg+xml</dc:format>
-  <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-   </cc:Work>
-  </rdf:RDF>
- </metadata>
- <g id="flag" fill-rule="evenodd" fill-opacity="1" transform="matrix(1.25 0 0 .93750 0 .0000011260)">
-  <rect id="rect576" height="512" width="171.16" y="2.8695e-7" x="170.3" fill="#fff"/>
-  <rect id="rect575" height="512" width="170.3" y=".000045701" x="0" fill="#f00"/>
-  <rect id="rect577" height="512" width="171.87" y=".000030219" x="340.13" fill="#f00"/>
- </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" id="canada" width="640" height="480" fill="#28ff09" fill-opacity="14.118" version="1.1"><metadata id="metadata3572"/><g id="flag" fill-opacity="1" fill-rule="evenodd" transform="matrix(1.25 0 0 .93750 0 .0000011260)"><rect id="rect576" width="171.16" height="512" x="170.3" y="0" fill="#fff"/><rect id="rect575" width="170.3" height="512" x="0" y="0" fill="red"/><rect id="rect577" width="171.87" height="512" x="340.13" y="0" fill="red"/></g></svg>
