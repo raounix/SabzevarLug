@@ -9,12 +9,8 @@ Django Project for SabzevarLug Website
 
 # Images :
 
-## Blog :
-<style>
-img {
-  border: 5px solid #555;
-}
-</style>
+## Blog (/):
+
 <p align="center">
   <img src="/screenshot/main_page.png" width="512px" style="border:20x;solid "/>
 </p>
@@ -23,7 +19,7 @@ img {
   <img src="/screenshot/topics.png" width="512px"/>
 </p>
 
-## Dashboard : 
+## Dashboard  ( /manage/ ): 
 <p align="center">
   <img src="/screenshot/login.png" width="512px"/>
 </p>
